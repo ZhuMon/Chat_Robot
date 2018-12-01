@@ -1,5 +1,5 @@
 bottle==0.12.13
+graphviz==0.10.1
 pygraphviz==1.5
 requests==2.20.1
 transitions==0.6.9
-graphviz==0.10.1
