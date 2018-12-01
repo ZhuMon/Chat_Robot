@@ -28,9 +28,8 @@ extern "C" {
 #endif
 
 /*visual studio*/
-#ifdef WIN32
+#ifdef WIN32_DLL
 #ifndef GVC_EXPORTS
-#undef extern
 #define extern __declspec(dllimport)
 #endif
 #endif
@@ -72,7 +71,7 @@ extern void attach_attrs(graph_t *g);
 /* Render layout in a specified format to an open FILE */
 extern int gvRender(GVC_t *gvc, graph_t *g, const char *format, FILE *out);
 
-/* Render layout in a specified format to a file with the given name */
+/* Render layout in a specified format to an open FILE */
 extern int gvRenderFilename(GVC_t *gvc, graph_t *g, const char *format, const char *filename);
 
 /* Render layout in a specified format to an external context */
@@ -105,18 +104,14 @@ extern int gvFreeContext(GVC_t *gvc);
  * At present, the str argument is unused, but may be used to modify
  * the search as in gvplugin_list above.
  */
-extern char** gvPluginList (GVC_t *gvc, const char* kind, int* sz, char*);
+extern char** gvPluginList (GVC_t *gvc, char* kind, int* sz, char*);
 
 /** Add a library from your user application
  * @param gvc Graphviz context to add library to
  * @param lib library to add
  */
-extern void gvAddLibrary(GVC_t *gvc, gvplugin_library_t *lib);
 
-/** Perform a Transitive Reduction on a graph
- * @param g  graph to be transformed.
- */
-extern int gvToolTred(graph_t *g);
+extern void gvAddLibrary(GVC_t *gvc, gvplugin_library_t *lib);
 
 #undef extern
 

@@ -17,7 +17,9 @@
 #ifndef GV_GEOM_H
 #define GV_GEOM_H
 
+#ifdef HAVE_CONFIG_H
 #include "arith.h"
+#endif
 
 #ifdef __cplusplus
 extern "C" {
@@ -34,6 +36,7 @@ typedef struct { point LL, UR; } box;
 
 typedef struct { pointf LL, UR; } boxf;
 
+#ifdef HAVE_CONFIG_H
 
 /* true if point p is inside box b */
 #define INSIDE(p,b)	(BETWEEN((b).LL.x,(p).x,(b).UR.x) && BETWEEN((b).LL.y,(p).y,(b).UR.y))
@@ -80,6 +83,8 @@ typedef struct { pointf LL, UR; } boxf;
 /* some common tolerance values */
 #define MILLIPOINT .001
 #define MICROPOINT .000001
+
+#endif
 
 #ifdef __cplusplus
 }

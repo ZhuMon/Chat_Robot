@@ -58,7 +58,7 @@ typedef unsigned int packval_t;
     } pack_info;
 
 /*visual studio*/
-#ifdef WIN32
+#ifdef WIN32_DLL
 #ifndef GVC_EXPORTS
 #define extern __declspec(dllimport)
 #endif
@@ -86,7 +86,6 @@ typedef unsigned int packval_t;
     extern Agraph_t **cccomps(Agraph_t *, int *, char *);
     extern Agraph_t **pccomps(Agraph_t *, int *, char *, boolean *);
     extern int nodeInduce(Agraph_t *);
-    extern Agraph_t *mapClust(Agraph_t *);
 #undef extern
 #ifdef __cplusplus
 }

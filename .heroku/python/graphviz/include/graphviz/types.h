@@ -1,3 +1,4 @@
+/* lib/common/types.h.  Generated from types.h.in by configure.  */
 /* $Id$ $Revision$ */
 /* vim:set shiftwidth=4 ts=8: */
 

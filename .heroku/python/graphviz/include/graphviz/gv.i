@@ -56,7 +56,9 @@
 #undef PACKAGE_VERSION
 #undef PACKAGE_NAME
 
+#ifdef HAVE_CONFIG_H
 #include "config.h"
+#endif
 #include "gvc.h"
 
 /** New graphs */
@@ -237,9 +239,6 @@ extern char* renderdata(Agraph_t *g, const char *format);
 /*** Writing graph back to file */
 extern bool write(Agraph_t *g, const char *filename);
 extern bool write(Agraph_t *g, FILE *f);
-
-/*** Graph transformation tools */
-extern bool tred(Agraph_t *g);
 
 %}
 

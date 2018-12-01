@@ -19,7 +19,7 @@ extern "C" {
 #define GVPR_H
 
 #include "cgraph.h"
-#ifdef _MSC_VER
+#ifdef WIN32
 typedef int ssize_t;
 #endif
 
