@@ -1,5 +1,5 @@
 bottle==0.12.13
 graphviz==0.10.1
-pygraphviz==1.5
+pygraphviz==1.5 --install-option="--include-path=/usr/local/include" --install-option="--library-path=/usr/local/lib"
 requests==2.20.1
 transitions==0.6.9
