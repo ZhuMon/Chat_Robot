@@ -1,6 +1,6 @@
 bottle==0.12.13
-cGraph
+cGraph==0.1
 graphviz==0.10.1
-pygraphviz==1.5 --install-option="--include-path=/opt/local/include" --install-option="--library-path=/opt/local/lib"
+pygraphviz==1.5 --install-option="--include-path=/app" --install-option="--library-path=/app"
 requests==2.20.1
 transitions==0.6.9
