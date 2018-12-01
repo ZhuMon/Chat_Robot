@@ -1,6 +1,6 @@
 bottle==0.12.13
 cGraph
 graphviz==0.10.1
-pygraphviz==1.5 --install-option="--include-path=/usr/local/Cellar/graphviz/2.38.0/include/graphviz"  --install-option="--library-path=/usr/local/Cellar/graphviz/2.38.0/lib/graphviz"
+pygraphviz==1.5 --install-option="--include-path=/opt/local/include" --install-option="--library-path=/opt/local/lib"
 requests==2.20.1
 transitions==0.6.9
