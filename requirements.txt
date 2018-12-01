@@ -1,4 +1,4 @@
 bottle==0.12.13
-pygraphviz==1.5 --install-option="--include-path=/app/.heroku/python/graphviz/include" --install-option="--library-path=/app/.heroku/python/graphviz/lib"
+pygraphviz==1.5 --install-option="--include-path=/usr/local/include" --install-option="--library-path=/usr/local/lib"
 requests==2.20.1
 transitions==0.6.9
