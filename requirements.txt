@@ -1,6 +1,6 @@
 bottle==0.12.13
 cGraph==0.1
-pygraphviz==1.5
+pygraphviz==1.5 --install-option="--include-path=/usr/include"
 QuantLib-Python==1.12
 setuptools==39.0.1
 wheel==0.32.3
