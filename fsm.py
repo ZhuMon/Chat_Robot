@@ -25,14 +25,14 @@ class TocMachine(GraphMachine):
     def to_A1(self, event):
         if event.get("message"):
             text = event['message']['text']
-            return text.lower() == 'A1'
+            return text == 'A1'
         return False
 
     def on_enter_A1(self, event):
         sender_id = event['sender']['id']
         responce = send_text_message(sender_id, draw(["A1"]))
-        responce = send_text_message(sender_id, draw(["A1", "B2"]))
-        self.go_back()
+        #responce = send_text_message(sender_id, draw(["A1", "B2"]))
+        #self.go_back()
 
     def on_enter_state1(self, event):
         print("I'm entering state1")
