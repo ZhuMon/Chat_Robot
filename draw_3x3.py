@@ -28,6 +28,6 @@ def draw(order):
         else:
             graph[k][j] = "o"
 
-    graph_str = "    A   B   C \n 1 "+graph[0][0]+" | "+graph[0][1]+" | "graph[0][2]+" \n   ---|---|---\n 2  "+graph[1][0]+" | "+graph[1][1]+" | "+graph[1][2]" \n   ---|---|---\n 3 "+graph[2][0]+"  | "+graph[2][1]+" | "+graph[2][2]" ")
+    graph_str = ("    A   B   C \n 1 "+graph[0][0]+" | "+graph[0][1]+" | "+graph[0][2]+" \n   ---|---|---\n 2  "+graph[1][0]+" | "+graph[1][1]+" | "+graph[1][2]+" \n   ---|---|---\n 3 "+graph[2][0]+"  | "+graph[2][1]+" | "+graph[2][2]+" ")
     return graph_str
 
