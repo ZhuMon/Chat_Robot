@@ -20,13 +20,13 @@ machine = TocMachine(
             'conditions': 'is_going_to_state1'
         },
         {
-            'trigger': 'advance',
+            'trigger': 'user_to_two',
             'source': 'user',
             'dest': 'state2',
             'conditions': 'is_going_to_state2'
         },
         {
-            'trigger': 'advance',
+            'trigger': 'user_to_A1',
             'source': 'user',
             'dest': 'A1',
             'conditions': 'to_A1'
@@ -70,7 +70,11 @@ def webhook_handler():
 
     if body['object'] == "page":
         event = body['entry'][0]['messaging'][0]
-        machine.advance(event)
+        if machine.state == "A1":
+            machine.user_to_A1(event)
+        #else:
+        #    machine.advance(event)
+        print("Ok")
         return 'OK'
 
 
