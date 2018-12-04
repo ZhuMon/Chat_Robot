@@ -11,7 +11,9 @@ def bind_image(imagelist, sender):
         imageA = imageA.convert('RGBA')
         rstPic.paste(imageA, (0,0), imageA)
 
-
+    img_addr = "binded_image/"+sender+".png"
     #儲存新的照片
-    rstPic.save("binded_image"+sender+".png")
+    rstPic.save(img_addr)
+
+    return img_addr
 

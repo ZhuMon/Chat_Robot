@@ -2,6 +2,7 @@ from transitions.extensions import GraphMachine
 
 from utils import send_text_message
 from draw_3x3 import draw
+from build_image import bind_image
 
 class TocMachine(GraphMachine):
     def __init__(self, **machine_configs):
@@ -30,8 +31,8 @@ class TocMachine(GraphMachine):
 
     def on_enter_A1(self, event):
         sender_id = event['sender']['id']
-        responce = send_text_message(sender_id, draw(["A1"]))
-        #responce = send_text_message(sender_id, draw(["A1", "B2"]))
+        new_image = bind_image(["A1"], sender_id)
+        responce = send_image_message(sender_id, new_image)
         #self.go_back()
 
     def on_enter_state1(self, event):
