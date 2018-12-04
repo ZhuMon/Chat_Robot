@@ -33,7 +33,7 @@ class TocMachine(GraphMachine):
         sender_id = event['sender']['id']
         new_image = bind_image(["A1"], sender_id)
         responce = send_image_message(sender_id, new_image)
-        #self.go_back()
+        self.go_back()
 
     def on_enter_state1(self, event):
         print("I'm entering state1")
