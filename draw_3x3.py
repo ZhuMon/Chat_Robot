@@ -24,9 +24,9 @@ def draw(order):
             k = 2
 
         if i%2 == 0:
-            graph[k][j] = "x"
-        else:
             graph[k][j] = "o"
+        else:
+            graph[k][j] = "x"
 
     graph_str = ("    A   B   C \n 1 "+graph[0][0]+" | "+graph[0][1]+" | "+graph[0][2]+" \n   ---|---|---\n 2  "+graph[1][0]+" | "+graph[1][1]+" | "+graph[1][2]+" \n   ---|---|---\n 3 "+graph[2][0]+"  | "+graph[2][1]+" | "+graph[2][2]+" ")
     return graph_str

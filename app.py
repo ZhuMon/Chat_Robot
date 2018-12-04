@@ -10,7 +10,13 @@ machine = TocMachine(
         'user',
         'state1',
         'state2',
-        'A1'
+        'A1',
+        'A1B1',
+        'A1B1x',
+        'A1B1A3',
+        'A1B1A3x',
+        'A1B1A3C2'
+        
     ],
     transitions=[
         {
@@ -20,23 +26,55 @@ machine = TocMachine(
             'conditions': 'is_going_to_state1'
         },
         {
-            'trigger': 'user_to_two',
+            'trigger': 'advance',
             'source': 'user',
             'dest': 'state2',
             'conditions': 'is_going_to_state2'
         },
         {
-            'trigger': 'user_to_A1',
+            'trigger': 'advance',
             'source': 'user',
             'dest': 'A1',
             'conditions': 'to_A1'
         },
         {
+            'trigger': 'a_one',
+            'source': 'A1',
+            'dest': 'A1B1',
+            'conditions': 'to_A1B1'
+        },
+        {
+            'trigger': 'a_one',
+            'source': 'A1B1',
+            'dest': 'A1B1x',
+            'conditions': 'to_A1B1x'
+        },
+        {
+            'trigger': 'a_one',
+            'source': 'A1B1',
+            'dest': 'A1B1A3',
+            'conditions': 'to_A1B1A3'
+        },
+        {
+            'trigger': 'a_one',
+            'source': 'A1B1A3',
+            'dest': 'A1B1A3x',
+            'conditions': 'to_A1B1A3x'
+        },
+        {
+            'trigger': 'a_one',
+            'source': 'A1B1A3',
+            'dest': 'A1B1A3C2',
+            'conditions': 'to_A1B1A3C2'
+        },
+        {
             'trigger': 'go_back',
             'source': [
                 'state1',
-                'state2',
-                'A1'
+                'state2', 
+                'A1B1x',
+                'A1B1A3x',
+                'A1B1A3C2'
             ],
             'dest': 'user'
         }
@@ -70,12 +108,13 @@ def webhook_handler():
 
     if body['object'] == "page":
         event = body['entry'][0]['messaging'][0]
-        if machine.state == "A1":
-            machine.user_to_A1(event)
-        #else:
-        #    machine.advance(event)
+        if machine.state[0] == 'A' and machine.state[1] == '1':
+            machine.a_one(event)
+        else:
+            machine.advance(event)
         print("Ok")
         return 'OK'
+
 
 
 @route('/show-fsm', methods=['GET'])
@@ -85,4 +124,5 @@ def show_fsm():
 
 
 if __name__ == "__main__":
-    run(host="0.0.0.0", port=PORT, debug=True, reloader=True)
+    #run(host="0.0.0.0", port=PORT, debug=True, reloader=True)
+    run(host="localhost", port=5000, debug=True, reloader=True)
