@@ -23,7 +23,7 @@ def send_image_message(id, image):
     payload = {
         "recipient": {"id": id},
         "message": {"attachment":{"type":"image"}},
-        "filedata": "@/app/"+imagee
+        "filedata": ("@/app/"+image),
         "type": "image/png"
     }
     response = requests.post(url, json=payload)
