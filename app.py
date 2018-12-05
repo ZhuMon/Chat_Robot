@@ -17,7 +17,8 @@ machine = TocMachine(
         'A1B1A3x',
         'A1B1A3C2',
         'A1C1', 'A1C1x', 'A1C1B3', 'A1C1B3x', 'A1C1B3C2', 'A1A2', 'A1A2x', 'A1A2C1', 'A1A2C1x', 'A1A2C1B3', 'A1C2', 'A1C2x', 'A1C2B3', 'A1C2B3x', 'A1C2B3C1', 'A1A3', 'A1A3x', 'A1A3C2', 'A1A3C2x', 'A1A3C2B1', 'A1B3', 'A1B3x', 'A1B3C2', 'A1B3C2x', 'A1B3C2A3', 'A1C3', 'A1C3x', 'A1C3B3', 'A1C3B3x', 'A1C3B3C1', 
-        'B1', 'B1C1', 'B1C1x', 'B1C1C3', 'B1C1C3x', 'B1C1C3A2', 'B1A2', 'B1A2x', 'B1A2C3', 'B1A2C3x', 'B1A2C3C1', 'B1B2', 'B1B2C1', 'B1B2C1x', 'B1B2C1C3', 'B1B2A2', 'B1B2A2A3', 'B1B2A2C1', 'B1B2A2C3', 'B1B2C2', 'B1B2C2x', 'B1B2C2A3', 'B1B2A3', 'B1B2A3A2', 'B1B2A3C2', 'B1B2A3C3', 'B1B2C3', 'B1B2C3C1', 'B1B2C3A2', 'B1B2C3A3', 'B1C2', 'B1C2x', 'B1C2C3', 'B1C2C3x', 'B1C2C3A3', 'B1A3', 'B1A3x', 'B1A3C3', 'B1A3C3C1', 'B1A3C3A2', 'B1B3', 'B1B3x', 'B1B3C3', 'B1B3C3C1', 'B1B3C3x', 'B1C3', 'B1C3C1', 'B1C3C1x', 'B1C3C1A2', 'B1C3A2', 'B1C3A2x', 'B1C3A2A3', 'B1C3C2', 'B1C3C2x', 'B1C3C2A3', 'B1C3A3', 'B1C3A3C1', 'B1C3A3A2', 'B1C3A3C2', 'B1C3B3', 'B1C3B3x', 'B1C3B3A2', 'B2', 'B2B1', 'B2B1C1', 'B2B1C1x', 'B2B1C1A2', 'B2B1A2', 'B2B1A2C1', 'B2B1A2A3', 'B2B1A2C3', 'B2B1C2', 'B2B1C2x', 'B2B1C2A3', 'B2B1A3', 'B2B1A3e', 'B2B1A3C2', 'B2B1C3', 'B2B1C3e', 'B2B1C3A3', 'B2C1', 'B2C1x', 'B2C1A2', 'B2C1A2B1', 'B2C1A2B3', 'B2C1A2C3', 'B2A2', 'B2A2B1', 'B2A2B1C1', 'B2A2B1e', 'B2A2C1', 'B2A2C1e', 'B2A2C1B3', 'B2A2A3', 'B2A2A3x', 'B2A2A3C3', 'B2A2B3', 'B2A2B3x', 'B2A2B3C1', 'B2A2C3', 'B2A2C3e', 'B2A2C3A3', 'B2C2', 'B2C2x', 'B2C2A3', 'B2C2A3x', 'B2C2A3B1', 'B2A3', 'B2A3x', 'B2A3B1', 'B2A3B1A2', 'B2A3B1e', 'B2B3', 'B2B3x', 'B2B3C1', 'B2B3C1x', 'B2B3C1A2',
+        'B1', 'B1C1', 'B1C1x', 'B1C1C3', 'B1C1C3x', 'B1C1C3A2', 'B1A2', 'B1A2x', 'B1A2C3', 'B1A2C3x', 'B1A2C3C1', 'B1B2', 'B1B2C1', 'B1B2C1x', 'B1B2C1C3', 'B1B2A2', 'B1B2A2A3', 'B1B2A2C1', 'B1B2A2C3', 'B1B2C2', 'B1B2C2x', 'B1B2C2A3', 'B1B2A3', 'B1B2A3A2', 'B1B2A3C2', 'B1B2A3C3', 'B1B2C3', 'B1B2C3C1', 'B1B2C3A2', 'B1B2C3A3', 'B1C2', 'B1C2x', 'B1C2C3', 'B1C2C3x', 'B1C2C3A3', 'B1A3', 'B1A3x', 'B1A3C3', 'B1A3C3C1', 'B1A3C3A2', 'B1B3', 'B1B3x', 'B1B3C3', 'B1B3C3C1', 'B1B3C3x', 'B1C3', 'B1C3C1', 'B1C3C1x', 'B1C3C1A2', 'B1C3A2', 'B1C3A2x', 'B1C3A2A3', 'B1C3C2', 'B1C3C2x', 'B1C3C2A3', 'B1C3A3', 'B1C3A3C1', 'B1C3A3A2', 'B1C3A3C2', 'B1C3B3', 'B1C3B3x', 'B1C3B3A2', 
+        'B2', 'B2B1', 'B2B1C1', 'B2B1C1x', 'B2B1C1A2', 'B2B1A2', 'B2B1A2C1', 'B2B1A2A3', 'B2B1A2C3', 'B2B1C2', 'B2B1C2x', 'B2B1C2A3', 'B2B1A3', 'B2B1A3e', 'B2B1A3C2', 'B2B1C3', 'B2B1C3e', 'B2B1C3A3', 'B2C1', 'B2C1x', 'B2C1A2', 'B2C1A2B1', 'B2C1A2B3', 'B2C1A2C3', 'B2A2', 'B2A2B1', 'B2A2B1C1', 'B2A2B1e', 'B2A2C1', 'B2A2C1e', 'B2A2C1B3', 'B2A2A3', 'B2A2A3x', 'B2A2A3C3', 'B2A2B3', 'B2A2B3x', 'B2A2B3C1', 'B2A2C3', 'B2A2C3e', 'B2A2C3A3', 'B2C2', 'B2C2x', 'B2C2A3', 'B2C2A3x', 'B2C2A3B1', 'B2A3', 'B2A3x', 'B2A3B1', 'B2A3B1A2', 'B2A3B1e', 'B2B3', 'B2B3x', 'B2B3C1', 'B2B3C1x', 'B2B3C1A2',
         'B2C3', 'B2C3C1', 'B2C3C1e', 'B2C3x',
         'B2C3C1A3',
         'C1', 'C1C2', 'C1C2x', 'C1C2A1', 'C1C2A1x', 'C1C2A1B3', 'C1C3', 'C1C3x', 'C1C3A2', 'C1C3A2x', 'C1C3A2B3', 'C1B1', 'C1B1x', 'C1B1C3', 'C1B1C3x', 'C1B1C3A2', 'C1B3', 'C1B3x', 'C1B3A2', 'C1B3A2x', 'C1B3A2C3', 'C1A1', 'C1A1x', 'C1A1B3', 'C1A1B3x', 'C1A1B3C2', 'C1A2', 'C1A2x', 'C1A2B3', 'C1A2B3x', 'C1A2B3A1', 'C1A3', 'C1A3x', 'C1A3A2', 'C1A3A2x', 'C1A3A2C3', 
@@ -1150,7 +1151,7 @@ machine = TocMachine(
 
 
         {
-            'trigger': 'c_one',
+            'trigger': 'advance',
             'source': 'user',
             'dest': 'C1',
             'conditions': 'to_C1'
@@ -1402,7 +1403,7 @@ machine = TocMachine(
         },
 
         {
-            'trigger': 'c_two',
+            'trigger': 'advance',
             'source': 'user',
             'dest': 'C2',
             'conditions': 'to_C2'
@@ -1838,7 +1839,7 @@ machine = TocMachine(
 
 
         {
-            'trigger': 'c_three',
+            'trigger': 'advance',
             'source': 'user',
             'dest': 'C3',
             'conditions': 'to_C3'
@@ -2090,7 +2091,7 @@ machine = TocMachine(
         },
 
         {
-            'trigger': 'b_three',
+            'trigger': 'advance',
             'source': 'user',
             'dest': 'B3',
             'conditions': 'to_B3'
@@ -2526,7 +2527,7 @@ machine = TocMachine(
 
 
         {
-            'trigger': 'a_three',
+            'trigger': 'advance',
             'source': 'user',
             'dest': 'A3',
             'conditions': 'to_A3'
@@ -2778,7 +2779,7 @@ machine = TocMachine(
         },
 
         {
-            'trigger': 'a_two',
+            'trigger': 'advance',
             'source': 'user',
             'dest': 'A2',
             'conditions': 'to_A2'
@@ -3222,10 +3223,15 @@ machine = TocMachine(
             'source': [
                 'state1',
                 'state2', 
+                'A1',
+                'A1B1',
                 'A1B1x',
+                'A1B1A3',
                 'A1B1A3x',
                 'A1B1A3C2',
-                'A1C1', 'A1C1x', 'A1C1B3', 'A1C1B3x', 'A1C1B3C2', 'A1A2', 'A1A2x', 'A1A2C1', 'A1A2C1x', 'A1A2C1B3', 'A1C2', 'A1C2x', 'A1C2B3', 'A1C2B3x', 'A1C2B3C1', 'A1A3', 'A1A3x', 'A1A3C2', 'A1A3C2x', 'A1A3C2B1', 'A1B3', 'A1B3x', 'A1B3C2', 'A1B3C2x', 'A1B3C2A3', 'A1C3', 'A1C3x', 'A1C3B3', 'A1C3B3x', 'A1C3B3C1', 'B1', 'B1C1', 'B1C1x', 'B1C1C3', 'B1C1C3x', 'B1C1C3A2', 'B1A2', 'B1A2x', 'B1A2C3', 'B1A2C3x', 'B1A2C3C1', 'B1B2', 'B1B2C1', 'B1B2C1x', 'B1B2C1C3', 'B1B2A2', 'B1B2A2A3', 'B1B2A2C1', 'B1B2A2C3', 'B1B2C2', 'B1B2C2x', 'B1B2C2A3', 'B1B2A3', 'B1B2A3A2', 'B1B2A3C2', 'B1B2A3C3', 'B1B2C3', 'B1B2C3C1', 'B1B2C3A2', 'B1B2C3A3', 'B1C2', 'B1C2x', 'B1C2C3', 'B1C2C3x', 'B1C2C3A3', 'B1A3', 'B1A3x', 'B1A3C3', 'B1A3C3C1', 'B1A3C3A2', 'B1B3', 'B1B3x', 'B1B3C3', 'B1B3C3C1', 'B1B3C3x', 'B1C3', 'B1C3C1', 'B1C3C1x', 'B1C3C1A2', 'B1C3A2', 'B1C3A2x', 'B1C3A2A3', 'B1C3C2', 'B1C3C2x', 'B1C3C2A3', 'B1C3A3', 'B1C3A3C1', 'B1C3A3A2', 'B1C3A3C2', 'B1C3B3', 'B1C3B3x', 'B1C3B3A2', 'B2', 'B2B1', 'B2B1C1', 'B2B1C1x', 'B2B1C1A2', 'B2B1A2', 'B2B1A2C1', 'B2B1A2A3', 'B2B1A2C3', 'B2B1C2', 'B2B1C2x', 'B2B1C2A3', 'B2B1A3', 'B2B1A3e', 'B2B1A3C2', 'B2B1C3', 'B2B1C3e', 'B2B1C3A3', 'B2C1', 'B2C1x', 'B2C1A2', 'B2C1A2B1', 'B2C1A2B3', 'B2C1A2C3', 'B2A2', 'B2A2B1', 'B2A2B1C1', 'B2A2B1e', 'B2A2C1', 'B2A2C1e', 'B2A2C1B3', 'B2A2A3', 'B2A2A3x', 'B2A2A3C3', 'B2A2B3', 'B2A2B3x', 'B2A2B3C1', 'B2A2C3', 'B2A2C3e', 'B2A2C3A3', 'B2C2', 'B2C2x', 'B2C2A3', 'B2C2A3x', 'B2C2A3B1', 'B2A3', 'B2A3x', 'B2A3B1', 'B2A3B1A2', 'B2A3B1e', 'B2B3', 'B2B3x', 'B2B3C1', 'B2B3C1x', 'B2B3C1A2',
+                'A1C1', 'A1C1x', 'A1C1B3', 'A1C1B3x', 'A1C1B3C2', 'A1A2', 'A1A2x', 'A1A2C1', 'A1A2C1x', 'A1A2C1B3', 'A1C2', 'A1C2x', 'A1C2B3', 'A1C2B3x', 'A1C2B3C1', 'A1A3', 'A1A3x', 'A1A3C2', 'A1A3C2x', 'A1A3C2B1', 'A1B3', 'A1B3x', 'A1B3C2', 'A1B3C2x', 'A1B3C2A3', 'A1C3', 'A1C3x', 'A1C3B3', 'A1C3B3x', 'A1C3B3C1', 
+                'B1', 'B1C1', 'B1C1x', 'B1C1C3', 'B1C1C3x', 'B1C1C3A2', 'B1A2', 'B1A2x', 'B1A2C3', 'B1A2C3x', 'B1A2C3C1', 'B1B2', 'B1B2C1', 'B1B2C1x', 'B1B2C1C3', 'B1B2A2', 'B1B2A2A3', 'B1B2A2C1', 'B1B2A2C3', 'B1B2C2', 'B1B2C2x', 'B1B2C2A3', 'B1B2A3', 'B1B2A3A2', 'B1B2A3C2', 'B1B2A3C3', 'B1B2C3', 'B1B2C3C1', 'B1B2C3A2', 'B1B2C3A3', 'B1C2', 'B1C2x', 'B1C2C3', 'B1C2C3x', 'B1C2C3A3', 'B1A3', 'B1A3x', 'B1A3C3', 'B1A3C3C1', 'B1A3C3A2', 'B1B3', 'B1B3x', 'B1B3C3', 'B1B3C3C1', 'B1B3C3x', 'B1C3', 'B1C3C1', 'B1C3C1x', 'B1C3C1A2', 'B1C3A2', 'B1C3A2x', 'B1C3A2A3', 'B1C3C2', 'B1C3C2x', 'B1C3C2A3', 'B1C3A3', 'B1C3A3C1', 'B1C3A3A2', 'B1C3A3C2', 'B1C3B3', 'B1C3B3x', 'B1C3B3A2', 
+                'B2', 'B2B1', 'B2B1C1', 'B2B1C1x', 'B2B1C1A2', 'B2B1A2', 'B2B1A2C1', 'B2B1A2A3', 'B2B1A2C3', 'B2B1C2', 'B2B1C2x', 'B2B1C2A3', 'B2B1A3', 'B2B1A3e', 'B2B1A3C2', 'B2B1C3', 'B2B1C3e', 'B2B1C3A3', 'B2C1', 'B2C1x', 'B2C1A2', 'B2C1A2B1', 'B2C1A2B3', 'B2C1A2C3', 'B2A2', 'B2A2B1', 'B2A2B1C1', 'B2A2B1e', 'B2A2C1', 'B2A2C1e', 'B2A2C1B3', 'B2A2A3', 'B2A2A3x', 'B2A2A3C3', 'B2A2B3', 'B2A2B3x', 'B2A2B3C1', 'B2A2C3', 'B2A2C3e', 'B2A2C3A3', 'B2C2', 'B2C2x', 'B2C2A3', 'B2C2A3x', 'B2C2A3B1', 'B2A3', 'B2A3x', 'B2A3B1', 'B2A3B1A2', 'B2A3B1e', 'B2B3', 'B2B3x', 'B2B3C1', 'B2B3C1x', 'B2B3C1A2',
                 'B2C3', 'B2C3C1', 'B2C3C1e', 'B2C3x',
                 'B2C3C1A3',
                 'C1', 'C1C2', 'C1C2x', 'C1C2A1', 'C1C2A1x', 'C1C2A1B3', 'C1C3', 'C1C3x', 'C1C3A2', 'C1C3A2x', 'C1C3A2B3', 'C1B1', 'C1B1x', 'C1B1C3', 'C1B1C3x', 'C1B1C3A2', 'C1B3', 'C1B3x', 'C1B3A2', 'C1B3A2x', 'C1B3A2C3', 'C1A1', 'C1A1x', 'C1A1B3', 'C1A1B3x', 'C1A1B3C2', 'C1A2', 'C1A2x', 'C1A2B3', 'C1A2B3x', 'C1A2B3A1', 'C1A3', 'C1A3x', 'C1A3A2', 'C1A3A2x', 'C1A3A2C3', 
@@ -3268,6 +3274,10 @@ def webhook_handler():
 
     if body['object'] == "page":
         event = body['entry'][0]['messaging'][0]
+        if event['message']['text'] == "init":
+            machine.go_back()
+
+
         if machine.state[0:2] == "A1":
             machine.a_one(event)
         elif machine.state[0:2] == "A2":
