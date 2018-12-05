@@ -2859,6 +2859,5368 @@ class TocMachine(GraphMachine):
         new_image = bind_image(["B2", "A1", "C3", "B1", "C1", "C2", new], sender_id)
         responce = send_image_url(sender_id, new_image)
         
+ 
+    def to_C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image([new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image([new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_C1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1C2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "B3" or text == "A2" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1C2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "C2", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "C2", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1C2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C1C2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "C2", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "C2", "C3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1C2A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A2" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1C2A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "C2", "C3", "A1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "C2", "C3", "A1", "B1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1C2A1B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C1C2A1B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "C2", "C3", "A1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "C2", "C3", "A1", "B1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C1C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C1C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1C3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "B3" or text == "A1" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1C3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "C3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "C3", "C2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1C3A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C1C3A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "C3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "C3", "C2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1C3A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1C3A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "C3", "C2", "A2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "C3", "C2", "A2", "B1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1C3A2B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C1C3A2B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "C3", "C2", "A2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "C3", "C2", "A2", "B1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C1B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C1B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "B3" or text == "A2" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "B1", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "B1", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1B1C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C1B1C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "B1", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "B1", "A1", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1B1C3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1B1C3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "B1", "A1", "C3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "B1", "A1", "C3", "C2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1B1C3A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C1B1C3A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "B1", "A1", "C3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "B1", "A1", "C3", "C2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C1B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C1B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1B3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "B1" or text == "A1" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1B3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "B3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "B3", "C2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1B3A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C1B3A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "B3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "B3", "C2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1B3A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1B3A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "B3", "C2", "A2", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "B3", "C2", "A2", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1B3A2C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C1B3A2C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "B3", "C2", "A2", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "B3", "C2", "A2", "A1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "C3" or text == "A2" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A1", "B1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1A1B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C1A1B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A1", "B1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1A1B3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1A1B3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A1", "B1", "B3", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A1", "B1", "B3", "A2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1A1B3C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_C1A1B3C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A1", "B1", "B3", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A1", "B1", "B3", "A2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C1A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C1A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "C3" or text == "A1" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A2", "B1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1A2B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C1A2B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A2", "B1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1A2B3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C1A2B3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A2", "B1", "B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A2", "B1", "B3", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1A2B3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C1A2B3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A2", "B1", "B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A2", "B1", "B3", "C3", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1A3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "B1" or text == "B3" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C1A3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A3", "C2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1A3A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C1A3A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A3", "C2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C1A3A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "B3":
+                return True
+        return False
+
+    def on_enter_C1A3A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A3", "C2", "A2", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A3", "C2", "A2", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C1A3A2C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C1A3A2C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C1", "B2", "A3", "C2", "A2", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C1", "B2", "A3", "C2", "A2", "A1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image([new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image([new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C2C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2C3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "B3" or text == "A1" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C2C3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "C3", "B2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2C3A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C2C3A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "C3", "B2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2C3A3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C2C3A3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "C3", "B2", "A3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "C3", "B2", "A3", "B3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2C3A3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C2C3A3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "C3", "B2", "A3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "C3", "B2", "A3", "B3", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C2B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "B3" or text == "A1" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C2B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B1", "B2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2B1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C2B1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B1", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2B1A3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C2B1A3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B1", "B2", "A3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B1", "B2", "A3", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2B1A3C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C2B1A3C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B1", "B2", "A3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B1", "B2", "A3", "A1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B2" :
+                return True
+        return False
+
+    def on_enter_C2B2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2B2C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C2B2C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2B2C3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "B3":
+                return True
+        return False
+
+    def on_enter_C2B2C3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "C3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "C3", "A1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2B2C3A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C2B2C3A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "C3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "C3", "A1", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2B2B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C2B2B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2B2B1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C2B2B1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "B1", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "B1", "B3", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B2B1C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C2B2B1C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "B1", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "B1", "B3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B2B1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C2B2B1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "B1", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "B1", "B3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B2B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C2B2B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2B2B3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "A3":
+                return True
+        return False
+
+    def on_enter_C2B2B3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "B3", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "B3", "B1", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2B2B3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C2B2B3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "B3", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "B3", "B1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C2B2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2B2A1B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C2B2A1B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A1", "C3", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B2A1B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C2B2A1B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A1", "C3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B2A1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C2B2A1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A1", "C3", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B2A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C2B2A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2B2A3C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C2B2A3C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A3", "B3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B2A3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C2B2A3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A3", "B3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B2A3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C2B2A3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B2", "A2", "A3", "B3", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C2B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2B3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "B1" or text == "A1" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C2B3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B3", "B2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2B3A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C2B3A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B3", "B2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2B3A3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C2B3A3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B3", "B2", "A3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B3", "B2", "A3", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2B3A3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C2B3A3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "B3", "B2", "A3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "B3", "B2", "A3", "C3", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "B1" or text == "B3" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C2A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A1", "B2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2A1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C2A1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A1", "B2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2A1A3C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C2A1A3C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A1", "B2", "A3", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A1", "B2", "A3", "A2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2A1A3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C2A1A3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A1", "B2", "A3", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A1", "B2", "A3", "A2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C2A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "B1" or text == "B3" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C2A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A2", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A2", "B2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2A2A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C2A2A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A2", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A2", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2A2A3C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C2A2A3C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A2", "B2", "A3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A2", "B2", "A3", "A1", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2A2A3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "B3":
+                return True
+        return False
+
+    def on_enter_C2A2A3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A2", "B2", "A3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A2", "B2", "A3", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C2A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2A3C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C2A3C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2A3C3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C2A3C3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "C3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "C3", "B3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2A3C3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C2A3C3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "C3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "C3", "B3", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2A3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C2A3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2A3B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C2A3B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "B1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "B1", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2A3B1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C2A3B1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "B1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "B1", "C3", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2A3B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C2A3B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2A3B3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C2A3B3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "B3", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2A3B3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C2A3B3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "B3", "C3", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2A3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C2A3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2A3A1C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C2A3A1C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "A1", "A2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2A3A1B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C2A3A1B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "A1", "A2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2A3A1B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C2A3A1B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "A1", "A2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C2A3A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C2A3A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C2A3A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "B3":
+                return True
+        return False
+
+    def on_enter_C2A3A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "A2", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "A2", "A1", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C2A3A2B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C2A3A2B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C2", "C1", "A3", "B2", "A2", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C2", "C1", "A3", "B2", "A2", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image([new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image([new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C3B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3B3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "A2" or text == "B1" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3B3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "B3", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "B3", "A3", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3B3C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_C3B3C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "B3", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "B3", "A3", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3B3C1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3B3C1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "B3", "A3", "C1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "B3", "A3", "C1", "C2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3B3C1A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C3B3C1A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "B3", "A3", "C1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "B3", "A3", "C1", "C2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C3A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C3A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3A3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "A2" or text == "C1" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3A3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A3", "B3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3A3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C3A3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A3", "B3", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3A3B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C1" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3A3B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A3", "B3", "B1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A3", "B3", "B1", "C2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3A3B1A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C3A3B1A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A3", "B3", "B1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A3", "B3", "B1", "C2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C3C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_C3C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3C2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "A2" or text == "B1" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3C2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "C2", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "C2", "C1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3C2A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C3C2A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "C2", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "C2", "C1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3C2A3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A2" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3C2A3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "C2", "C1", "A3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "C2", "C1", "A3", "B3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3C2A3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C3C2A3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "C2", "C1", "A3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "C2", "C1", "A3", "B3", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C3A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C3A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A3" or text == "C2" or text == "C1" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A2", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A2", "B3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3A2B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C3A2B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A2", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A2", "B3", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3A2B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3A2B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A2", "B3", "B1", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A2", "B3", "B1", "C1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3A2B1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C3A2B1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A2", "B3", "B1", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A2", "B3", "B1", "C1", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C3C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_C3C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3C1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "A3" or text == "B1" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3C1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "C1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "C1", "C2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3C1A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C3C1A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "C1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "C1", "C2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3C1A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A3" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3C1A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "C1", "C2", "A2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "C1", "C2", "A2", "B1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3C1A2B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_C3C1A2B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "C1", "C2", "A2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "C1", "C2", "A2", "B1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "A3" or text == "C1" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "B1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "B1", "C2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3B1A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_C3B1A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "B1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "B1", "C2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3B1A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "A1":
+                return True
+        return False
+
+    def on_enter_C3B1A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "B1", "C2", "A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "B1", "C2", "A2", "A3", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3B1A2C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_C3B1A2C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "B1", "C2", "A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "B1", "C2", "A2", "A3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_C3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_C3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A3" or text == "C2" or text == "A2" or text == "C1":
+                return True
+        return False
+
+    def on_enter_C3A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A1", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A1", "B3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3A1B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_C3A1B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A1", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A1", "B3", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_C3A1B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "A2":
+                return True
+        return False
+
+    def on_enter_C3A1B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A1", "B3", "B1", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A1", "B3", "B1", "C1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_C3A1B1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_C3A1B1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["C3", "B2", "A1", "B3", "B1", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["C3", "B2", "A1", "B3", "B1", "C1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image([new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image([new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_B3A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "A2" or text == "C1" or text == "B1":
+                return True
+        return False
+
+    def on_enter_B3A3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A3", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3A3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_B3A3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A3", "B2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A3A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C1" or text == "B1":
+                return True
+        return False
+
+    def on_enter_B3A3A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A3", "B2", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A3", "B2", "A1", "A2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3A3A1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_B3A3A1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A3", "B2", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A3", "B2", "A1", "A2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_B3C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3C2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A3" or text == "A2" or text == "C1" or text == "B1":
+                return True
+        return False
+
+    def on_enter_B3C2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "C2", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "C2", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3C2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_B3C2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "C2", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "C2", "B2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3C2A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A2" or text == "B1":
+                return True
+        return False
+
+    def on_enter_B3C2A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "C2", "B2", "A1", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "C2", "B2", "A1", "C1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3C2A1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_B3C2A1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "C2", "B2", "A1", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "C2", "B2", "A1", "C1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B2" :
+                return True
+        return False
+
+    def on_enter_B3B2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3B2A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_B3B2A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3B2A3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "A2":
+                return True
+        return False
+
+    def on_enter_B3B2A3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A3", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A3", "C1", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3B2A3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_B3B2A3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A3", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A3", "C1", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3B2C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_B3B2C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3B2C2C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_B3B2C2C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C2", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C2", "A2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B2C2A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_B3B2C2A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C2", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C2", "A2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B2C2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_B3B2C2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C2", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C2", "A2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B2A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_B3B2A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3B2A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A3" or text == "A1":
+                return True
+        return False
+
+    def on_enter_B3B2A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A2", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A2", "C2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3B2A2C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_B3B2A2C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A2", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A2", "C2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B2C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_B3B2C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3B2C1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_B3B2C1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C1", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C1", "A3", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B2C1A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_B3B2C1A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C1", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C1", "A3", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B2C1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_B3B2C1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C1", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "C1", "A3", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_B3B2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3B2A1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_B3B2A1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A1", "A2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B2A1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_B3B2A1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A1", "A2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B2A1C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_B3B2A1C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B2", "B1", "A1", "A2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_B3A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A3" or text == "C2" or text == "C1" or text == "B1":
+                return True
+        return False
+
+    def on_enter_B3A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A2", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A2", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3A2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_B3A2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A2", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A2", "B2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A2A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "B1":
+                return True
+        return False
+
+    def on_enter_B3A2A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A2", "B2", "A1", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A2", "B2", "A1", "A3", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3A2A1C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_B3A2A1C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A2", "B2", "A1", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A2", "B2", "A1", "A3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_B3C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3C1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A3" or text == "C2" or text == "A2" or text == "B1":
+                return True
+        return False
+
+    def on_enter_B3C1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "C1", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3C1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_B3C1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "C1", "B2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3C1A1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_B3C1A1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "C1", "B2", "A1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "C1", "B2", "A1", "B1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3C1A1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_B3C1A1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "C1", "B2", "A1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "C1", "B2", "A1", "B1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_B3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A3" or text == "C2" or text == "A2" or text == "C1":
+                return True
+        return False
+
+    def on_enter_B3B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B1", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3B1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_B3B1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B1", "B2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3B1A1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_B3B1A1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B1", "B2", "A1", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B1", "B2", "A1", "C1", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3B1A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "A2":
+                return True
+        return False
+
+    def on_enter_B3B1A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "B1", "B2", "A1", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "B1", "B2", "A1", "C1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_B3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_B3A1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A1A3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C1" or text == "B1":
+                return True
+        return False
+
+    def on_enter_B3A1A3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "A3", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "A3", "A2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3A1A3C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_B3A1A3C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "A3", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "A3", "A2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3A1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_B3A1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A1C2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A2" or text == "B1":
+                return True
+        return False
+
+    def on_enter_B3A1C2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "C2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "C2", "A3", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3A1C2C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_B3A1C2C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "C2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "C2", "A3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3A1A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_B3A1A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A1A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "B1":
+                return True
+        return False
+
+    def on_enter_B3A1A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "A2", "A3", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3A1A2C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_B3A1A2C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "A2", "A3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3A1C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_B3A1C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A1C1A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_B3A1C1A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "C1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "C1", "B1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3A1C1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_B3A1C1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "C1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "C1", "B1", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3A1C1A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_B3A1C1A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "C1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "C1", "B1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_B3A1B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_B3A1B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_B3A1B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A3" or text == "A2":
+                return True
+        return False
+
+    def on_enter_B3A1B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "B1", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "B1", "C1", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_B3A1B1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_B3A1B1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B3", "C3", "A1", "B2", "B1", "C1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B3", "C3", "A1", "B2", "B1", "C1", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A3" :
+                return True
+        return False
+
+    def on_enter_A3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image([new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image([new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_A3A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3A2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "B1" or text == "C2" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3A2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "A2", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "A2", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3A2C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A3A2C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "A2", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "A2", "A1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3A2C3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C2" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3A2C3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "A2", "A1", "C3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "A2", "A1", "C3", "B3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3A2C3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_A3A2C3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "A2", "A1", "C3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "A2", "A1", "C3", "B3", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "B1" or text == "C3" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "A1", "A2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3A1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_A3A1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "A1", "A2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3A1C2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3A1C2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "A1", "A2", "C2", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "A1", "A2", "C2", "B3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3A1C2B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_A3A1C2B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "A1", "A2", "C2", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "A1", "A2", "C2", "B3", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A3B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A3B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3B3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A2" or text == "B1" or text == "C2" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3B3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "B3", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3B3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A3B3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "B3", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "B3", "C3", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3B3A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3B3A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "B3", "C3", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "B3", "C3", "A1", "A2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3B3A1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_A3B3A1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "B3", "C3", "A1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "B3", "C3", "A1", "A2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_A3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "B3" or text == "C3" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "B1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "B1", "A2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3B1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_A3B1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "B1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "B1", "A2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3B1C2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3B1C2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "B1", "A2", "C2", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "B1", "A2", "C2", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3B1C2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A3B1C2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "B1", "A2", "C2", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "B1", "A2", "C2", "C3", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A3C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A3C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3C3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A2" or text == "A1" or text == "C2" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3C3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C3", "B3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3C3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_A3C3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C3", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C3", "B3", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3C3B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3C3B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C3", "B3", "B1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C3", "B3", "B1", "C2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3C3B1A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_A3C3B1A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C3", "B3", "B1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C3", "B3", "B1", "C2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A3C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_A3C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3C2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A2" or text == "A1" or text == "C3" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3C2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C2", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C2", "B3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3C2B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_A3C2B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C2", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C2", "B3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3C2B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A2" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A3C2B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C2", "B3", "B1", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C2", "B3", "B1", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3C2B1C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A3C2B1C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C2", "B3", "B1", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C2", "B3", "B1", "A1", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A3C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A3C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", new, "A2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3C1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "B3" or text == "B1" or text == "C3":
+                return True
+        return False
+
+    def on_enter_A3C1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C1", "A2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3C1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_A3C1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C1", "A2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C1", "A2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A3C1C2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "B1":
+                return True
+        return False
+
+    def on_enter_A3C1C2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C1", "A2", "C2", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C1", "A2", "C2", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A3C1C2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A3C1C2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A3", "B2", "C1", "A2", "C2", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A3", "B2", "C1", "A2", "C2", "C3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" :
+                return True
+        return False
+
+    def on_enter_A2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image([new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image([new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "B1" or text == "C3" or text == "C2":
+                return True
+        return False
+
+    def on_enter_A2A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "A1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "A1", "B2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2A1C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A2A1C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "A1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "A1", "B2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2A1C1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "C2":
+                return True
+        return False
+
+    def on_enter_A2A1C1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "A1", "B2", "C1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "A1", "B2", "C1", "B1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2A1C1B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A2A1C1B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "A1", "B2", "C1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "A1", "B2", "C1", "B1", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A2B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2B3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "B1" or text == "C3" or text == "C2":
+                return True
+        return False
+
+    def on_enter_A2B3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B3", "B2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2B3C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A2B3C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B3", "B2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2B3C1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "C2":
+                return True
+        return False
+
+    def on_enter_A2B3C1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B3", "B2", "C1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B3", "B2", "C1", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2B3C1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A2B3C1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B3", "B2", "C1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B3", "B2", "C1", "C3", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B2" :
+                return True
+        return False
+
+    def on_enter_A2B2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2B2A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A2B2A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2B2A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "B1":
+                return True
+        return False
+
+    def on_enter_A2B2A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "A1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "A1", "C3", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2B2A1C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A2B2A1C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "A1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "A1", "C3", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2B2B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A2B2B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2B2B3C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A2B2B3C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "B3", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "B3", "B1", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B2B3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A2B2B3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "B3", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "B3", "B1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B2B3C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A2B2B3C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "B3", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "B3", "B1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B2B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_A2B2B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2B2B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "C1":
+                return True
+        return False
+
+    def on_enter_A2B2B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "B1", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "B1", "B3", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2B2B1C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A2B2B1C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "B1", "B3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "B1", "B3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B2C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A2B2C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2B2C3B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A2B2C3B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C3", "A1", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B2C3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_A2B2C3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C3", "A1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B2C3C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A2B2C3C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C3", "A1", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B2C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A2B2C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2B2C1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A2B2C1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C1", "B1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B2C1B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A2B2C1B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C1", "B1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B2C1C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A2B2C1C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B2", "C2", "C1", "B1", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_A2B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "B3" or text == "C3" or text == "C2":
+                return True
+        return False
+
+    def on_enter_A2B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B1", "B2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2B1C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A2B1C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B1", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2B1C1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "C2":
+                return True
+        return False
+
+    def on_enter_A2B1C1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B1", "B2", "C1", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B1", "B2", "C1", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2B1C1C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A2B1C1C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "B1", "B2", "C1", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "B1", "B2", "C1", "A1", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A2C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2C3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "B3" or text == "B1" or text == "C2":
+                return True
+        return False
+
+    def on_enter_A2C3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C3", "B2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2C3C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A2C3C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C3", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C3", "B2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2C3C1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A2C3C1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C3", "B2", "C1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C3", "B2", "C1", "C2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2C3C1B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A2C3C1B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C3", "B2", "C1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C3", "B2", "C1", "C2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_A2C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2C2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "B3" or text == "B1" or text == "C3":
+                return True
+        return False
+
+    def on_enter_A2C2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C2", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C2", "B2", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2C2C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A2C2C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C2", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C2", "B2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2C2C1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A2C2C1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C2", "B2", "C1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C2", "B2", "C1", "C3", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2C2C1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "B1":
+                return True
+        return False
+
+    def on_enter_A2C2C1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C2", "B2", "C1", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C2", "B2", "C1", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2C1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C1" :
+                return True
+        return False
+
+    def on_enter_A2C1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", new, "B2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2C1A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A2C1A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2C1A1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "C3" or text == "C2":
+                return True
+        return False
+
+    def on_enter_A2C1A1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "A1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "A1", "B1", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2C1A1B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A2C1A1B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "A1", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "A1", "B1", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2C1B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A2C1B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2C1B3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B1" or text == "C2":
+                return True
+        return False
+
+    def on_enter_A2C1B3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "B3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "B3", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2C1B3C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A2C1B3C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "B3", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "B3", "A1", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2C1B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_A2C1B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2C1B1x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "B3" or text == "C2":
+                return True
+        return False
+
+    def on_enter_A2C1B1x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "B1", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "B1", "A1", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2C1B1C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A2C1B1C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "B1", "A1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "B1", "A1", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2C1C3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C3" :
+                return True
+        return False
+
+    def on_enter_A2C1C3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", new, "C2"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2C1C3A1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A1" :
+                return True
+        return False
+
+    def on_enter_A2C1C3A1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "C3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "C3", "C2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2C1C3B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A2C1C3B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "C3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "C3", "C2", new, "B1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2C1C3B1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B1" :
+                return True
+        return False
+
+    def on_enter_A2C1C3B1(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "C3", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "C3", "C2", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
+
+
+
+    def to_A2C1C2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "C2" :
+                return True
+        return False
+
+    def on_enter_A2C1C2(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", new, "C3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+
+
+
+    def to_A2C1C2x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+           if text == "A1" or text == "B1":
+                return True
+        return False
+
+    def on_enter_A2C1C2x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "C2", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "C2", "C3", new, "B3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+    def to_A2C1C2B3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "B3" :
+                return True
+        return False
+
+    def on_enter_A2C1C2B3(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["A2", "A3", "C1", "B2", "C2", "C3", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["A2", "A3", "C1", "B2", "C2", "C3", new, "A1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
+
+
+
+
+
+
 
     def on_enter_state1(self, event):
         print("I'm entering state1")
