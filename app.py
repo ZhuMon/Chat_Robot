@@ -2,6 +2,7 @@ from bottle import route, run, request, abort, static_file
 
 from fsm import TocMachine
 import os
+from utils import send_image_url 
 
 VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
 PORT = os.environ['PORT']
@@ -3221,6 +3222,7 @@ machine = TocMachine(
         {
             'trigger': 'go_back',
             'source': [
+                'user',
                 'state1',
                 'state2', 
                 'A1',
@@ -3274,8 +3276,9 @@ def webhook_handler():
 
     if body['object'] == "page":
         event = body['entry'][0]['messaging'][0]
-        if event['message']['text'] == "init":
+        if event.get('message') and event['message']['text'] == "init":
             machine.go_back()
+            send_image_url(event['sender']['id'], "https://i.imgur.com/5XlsDjU.png")
 
 
         if machine.state[0:2] == "A1":

@@ -2828,6 +2828,22 @@ class TocMachine(GraphMachine):
         new_image = bind_image(["B2", "A1", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
 
+    def to_B2C3x(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" or text == "C2" or text == "A3" or text == "B3":
+                return True
+        return False
+
+    def on_enter_B2C3x(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B2", "A1", "C3", "B1", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B2", "A1", "C3", "B1", new, "C1"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "You lose")
+        self.go_back()
 
 
     def to_B2C3C1(self, event):
@@ -2845,6 +2861,22 @@ class TocMachine(GraphMachine):
         new_image = bind_image(["B2", "A1", "C3", "B1", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
 
+    def to_B2C3C1e(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            if text == "A2" or text == "B3":
+                return True
+        return False
+
+    def on_enter_B2C3C1e(self, event):
+        sender_id = event['sender']['id']
+        new = event['message']['text']
+        new_image = bind_image(["B2", "A1", "C3", "B1", "C1", "C2", new], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        new_image = bind_image(["B2", "A1", "C3", "B1", "C1", "C2", new, "A3"], sender_id)
+        responce = send_image_url(sender_id, new_image)
+        responese = send_text_message(sender_id, "平手")
+        self.go_back()
 
     def to_B2C3C1A3(self, event):
         if event.get("message"):
@@ -2858,7 +2890,8 @@ class TocMachine(GraphMachine):
         new = event['message']['text']
         new_image = bind_image(["B2", "A1", "C3", "B1", "C1", "C2", new], sender_id)
         responce = send_image_url(sender_id, new_image)
-        
+        responese = send_text_message(sender_id, "You win")
+        self.go_back()
  
     def to_C1(self, event):
         if event.get("message"):
@@ -8218,7 +8251,8 @@ class TocMachine(GraphMachine):
 
 
 
-
+    
+       
 
 
 

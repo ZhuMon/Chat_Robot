@@ -24,10 +24,10 @@ void draw(){
   gp.line(60, 0, 60, 180);
   gp.line(120, 0, 120, 180);
   
-  my_x(C2);
+  //my_x(C2);
   gp.endDraw();
   image(gp, 0, 0);
-  gp.save("C2_x.png");
+  gp.save("init.png");
   
   
   
