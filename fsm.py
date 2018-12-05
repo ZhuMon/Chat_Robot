@@ -153,7 +153,7 @@ class TocMachine(GraphMachine):
     def to_A1C1x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "C2" or text == "A3" or text == "C3":
+            if text == "A2" or text == "C2" or text == "A3" or text == "C3":
                 return True
         return False
 
@@ -189,7 +189,7 @@ class TocMachine(GraphMachine):
     def to_A1C1B3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A3" or text == "C3":
+            if text == "A3" or text == "C3":
                 return True
         return False
 
@@ -244,7 +244,7 @@ class TocMachine(GraphMachine):
     def to_A1A2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "B1" or text == "C2" or text == "B3" or text == "C3":
+        	if text == "B1" or text == "C2" or text == "B3" or text == "C3":
                 return True
         return False
 
@@ -280,7 +280,7 @@ class TocMachine(GraphMachine):
     def to_A1A2C1x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C2" or text == "C3":
+        	if text == "C2" or text == "C3":
                 return True
         return False
 
@@ -335,7 +335,7 @@ class TocMachine(GraphMachine):
     def to_A1C2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "A2" or text == "A3" or text == "C3":
+            if text == "C1" or text == "A2" or text == "A3" or text == "C3":
                 return True
         return False
 
@@ -371,7 +371,7 @@ class TocMachine(GraphMachine):
     def to_A1C2B3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "C3":
+            if text == "A2" or text == "C3":
                 return True
         return False
 
@@ -426,7 +426,7 @@ class TocMachine(GraphMachine):
     def to_A1A3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "B1" or text == "C1" or text == "B3" or text == "C3":
+        	if text == "B1" or text == "C1" or text == "B3" or text == "C3":
                 return True
         return False
 
@@ -462,7 +462,7 @@ class TocMachine(GraphMachine):
     def to_A1A3C2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "C3":
+        	if text == "C1" or text == "C3":
                 return True
         return False
 
@@ -517,7 +517,7 @@ class TocMachine(GraphMachine):
     def to_A1B3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "B1" or text == "C1" or text == "A3" or text == "C3":
+        	if text == "B1" or text == "C1" or text == "A3" or text == "C3":
                 return True
         return False
 
@@ -553,7 +553,7 @@ class TocMachine(GraphMachine):
     def to_A1B3C2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "B1" or text == "C3":
+        	if text == "B1" or text == "C3":
                 return True
         return False
 
@@ -608,7 +608,7 @@ class TocMachine(GraphMachine):
     def to_A1C3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "A2" or text == "C2" or text == "A3":
+        	if text == "C1" or text == "A2" or text == "C2" or text == "A3":
                 return True
         return False
 
@@ -644,7 +644,7 @@ class TocMachine(GraphMachine):
     def to_A1C3B3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "C2":
+            if text == "A2" or text == "C2":
                 return True
         return False
 
@@ -716,7 +716,7 @@ class TocMachine(GraphMachine):
     def to_B1C1x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "C2" or text == "A3" or text == "B3":
+            if text == "A2" or text == "C2" or text == "A3" or text == "B3":
                 return True
         return False
 
@@ -752,7 +752,7 @@ class TocMachine(GraphMachine):
     def to_B1C1C3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A3" or text == "B3":
+        	if text == "A3" or text == "B3":
                 return True
         return False
 
@@ -807,7 +807,7 @@ class TocMachine(GraphMachine):
     def to_B1A2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "C2" or text == "A3" or text == "B3":
+        	if text == "C1" or text == "C2" or text == "A3" or text == "B3":
                 return True
         return False
 
@@ -843,7 +843,7 @@ class TocMachine(GraphMachine):
     def to_B1A2C3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C2" or text == "B3":
+        	if text == "C2" or text == "B3":
                 return True
         return False
 
@@ -915,7 +915,7 @@ class TocMachine(GraphMachine):
     def to_B1B2C1x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "C2":
+            if text == "A2" or text == "C2":
                 return True
         return False
 
@@ -1044,7 +1044,7 @@ class TocMachine(GraphMachine):
     def to_B1B2C2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "C3":
+        	if text == "C1" or text == "C3":
                 return True
         return False
 
@@ -1247,7 +1247,7 @@ class TocMachine(GraphMachine):
     def to_B1C2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "A2" or text == "A3" or text == "B3":
+        	if text == "C1" or text == "A2" or text == "A3" or text == "B3":
                 return True
         return False
 
@@ -1283,7 +1283,7 @@ class TocMachine(GraphMachine):
     def to_B1C2C3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "B3":
+        	if text == "A2" or text == "B3":
                 return True
         return False
 
@@ -1338,7 +1338,7 @@ class TocMachine(GraphMachine):
     def to_B1A3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "A2" or text == "C2" or text == "B3":
+        	if text == "C1" or text == "A2" or text == "C2" or text == "B3":
                 return True
         return False
 
@@ -1429,7 +1429,7 @@ class TocMachine(GraphMachine):
     def to_B1B3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "A2" or text == "C2" or text == "A3":
+        	if text == "C1" or text == "A2" or text == "C2" or text == "A3":
                 return True
         return False
 
@@ -1484,7 +1484,7 @@ class TocMachine(GraphMachine):
     def to_B1B3C3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "C2":
+        	if text == "A2" or text == "C2":
                 return True
         return False
 
@@ -1537,7 +1537,7 @@ class TocMachine(GraphMachine):
     def to_B1C3C1x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A3" or text == "B3":
+        	if text == "A3" or text == "B3":
                 return True
         return False
 
@@ -1592,7 +1592,7 @@ class TocMachine(GraphMachine):
     def to_B1C3A2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C2" or text == "B3":
+        	if text == "C2" or text == "B3":
                 return True
         return False
 
@@ -1647,7 +1647,7 @@ class TocMachine(GraphMachine):
     def to_B1C3C2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "B3":
+        	if text == "A2" or text == "B3":
                 return True
         return False
 
@@ -1776,7 +1776,7 @@ class TocMachine(GraphMachine):
     def to_B1C3B3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "C2":
+        	if text == "C1" or text == "C2":
                 return True
         return False
 
@@ -1865,7 +1865,7 @@ class TocMachine(GraphMachine):
     def to_B2B1C1x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C2" or text == "C3":
+        	if text == "C2" or text == "C3":
                 return True
         return False
 
@@ -1994,7 +1994,7 @@ class TocMachine(GraphMachine):
     def to_B2B1C2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "C3":
+        	if text == "C1" or text == "C3":
                 return True
         return False
 
@@ -2049,7 +2049,7 @@ class TocMachine(GraphMachine):
     def to_B2B1A3e(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "C3":
+        	if text == "A2" or text == "C3":
                 return True
         return False
 
@@ -2104,7 +2104,7 @@ class TocMachine(GraphMachine):
     def to_B2B1C3e(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C1" or text == "A2":
+        	if text == "C1" or text == "A2":
                 return True
         return False
 
@@ -2159,7 +2159,7 @@ class TocMachine(GraphMachine):
     def to_B2C1x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "B2" or text == "C2" or text == "B3" or text == "C3":
+        	if text == "B2" or text == "C2" or text == "B3" or text == "C3":
                 return True
         return False
 
@@ -2305,7 +2305,7 @@ class TocMachine(GraphMachine):
     def to_B2A2B1e(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A3" or text == "C3":
+        	if text == "A3" or text == "C3":
                 return True
         return False
 
@@ -2341,7 +2341,7 @@ class TocMachine(GraphMachine):
     def to_B2A2C1e(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "B1" or text == "C3":
+        	if text == "B1" or text == "C3":
                 return True
         return False
 
@@ -2396,7 +2396,7 @@ class TocMachine(GraphMachine):
     def to_B2A2A3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "B1" or text == "B3":
+        	if text == "B1" or text == "B3":
                 return True
         return False
 
@@ -2451,7 +2451,7 @@ class TocMachine(GraphMachine):
     def to_B2A2B3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A3" or text == "C3":
+        	if text == "A3" or text == "C3":
                 return True
         return False
 
@@ -2506,7 +2506,7 @@ class TocMachine(GraphMachine):
     def to_B2A2C3e(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "B1" or text == "C1":
+        	if text == "B1" or text == "C1":
                 return True
         return False
 
@@ -2561,7 +2561,7 @@ class TocMachine(GraphMachine):
     def to_B2C2x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "B1" or text == "C1" or text == "B3" or text == "C3":
+        	if text == "B1" or text == "C1" or text == "B3" or text == "C3":
                 return True
         return False
 
@@ -2597,7 +2597,7 @@ class TocMachine(GraphMachine):
     def to_B2C2A3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "B3" or text == "C3":
+        	if text == "B3" or text == "C3":
                 return True
         return False
 
@@ -2652,7 +2652,7 @@ class TocMachine(GraphMachine):
     def to_B2A3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "C2" or text == "B3" or text == "C3":
+        	if text == "A2" or text == "C2" or text == "B3" or text == "C3":
                 return True
         return False
 
@@ -2707,7 +2707,7 @@ class TocMachine(GraphMachine):
     def to_B2A3B1e(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C2" or text == "C3":
+        	if text == "C2" or text == "C3":
                 return True
         return False
 
@@ -2743,7 +2743,7 @@ class TocMachine(GraphMachine):
     def to_B2B3x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "A2" or text == "C2" or text == "A3" or text == "C3":
+        	if text == "A2" or text == "C2" or text == "A3" or text == "C3":
                 return True
         return False
 
@@ -2779,7 +2779,7 @@ class TocMachine(GraphMachine):
     def to_B2B3C1x(self, event):
         if event.get("message"):
             text = event['message']['text']
-        if text == "C2" or text == "C3":
+        	if text == "C2" or text == "C3":
                 return True
         return False
 

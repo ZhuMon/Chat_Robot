@@ -144,7 +144,7 @@ for order in range(0, int(num)):
         # if (A1, ...) exist
         if all_list[order][opt_num] != "" and all_list[order][opt_num][0] == '(':
             o_block = all_list[order][opt_num].split(',')
-            print_tmp = "        if "
+            print_tmp = "           if "
             for i in range(0, len(o_block)): #o_block: 選的cell會使user輸
                 o_block[i] = o_block[i].replace('(', '')
                 o_block[i] = o_block[i].rstrip()
