@@ -5,4 +5,6 @@ WORKDIR /app/.
 RUN apt-get install libgraphviz-dev \
 pkg-config
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -r /app/requirements.txt
+
+CMD python app.py runserver 0.0.0.0:$PORT
