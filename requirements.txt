@@ -1,6 +1,6 @@
 bottle==0.12.13
 cGraph==0.1
-git+git://github.com/pygraphviz/pygraphviz.git --install-option="--include-path=/usr/include/graphviz" --install-option="--library-path=/app/.heroku/python/lib"
+pygraphviz==1.5
 setuptools==39.0.1
 requests==2.20.1
 transitions==0.6.9
