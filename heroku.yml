@@ -8,4 +8,5 @@ build:
     web: Dockerfile
     worker: docker_api/Dockerfile
 run:
-  web: python3 app.py
+  web: python app.py
+  worker: python3 app.py
