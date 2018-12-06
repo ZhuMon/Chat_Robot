@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+
+message image {
+    string name = 1;
+    string url = 2;
+    /*optional string A1 = 3;
+    optional string A2 = 4;
+    optional string A3 = 5;
+    optional string B1 = 6;
+    optional string B2 = 7;
+    optional string B3 = 8;
+    optional string C1 = 9;
+    optional string C2 = 10;
+    optional string C3 = 11;
+    */
+}
+
+message all_image {
+    repeated image image = 1;
+}
