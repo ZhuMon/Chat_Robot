@@ -6,7 +6,7 @@ setup:
 build:
   docker:
     web: Dockerfile
-    worker: docker_api/Dockerfile
+    worker: ./Dockerfile
 run:
   web: python app.py
   worker: python3 app.py
