@@ -3,15 +3,19 @@
 ## Usage
 ### Initial State : ```user```
 *   user
-    *   input: A1
-    *   reply: 
-        ![](https://i.imgur.com/vs8pO8r.png)
-        ![](https://i.imgur.com/xVUffK5.png)
-            *   input: B1
-            *   reply: 
-                ![](https://i.imgur.com/q9VW3zQ.png)
-                ![](https://i.imgur.com/KnLPIbW.png)
-                
+    *   Input: A1
+    *   Reply: 
+    *    ![](https://i.imgur.com/vs8pO8r.png)  ![](https://i.imgur.com/xVUffK5.png)
+         *   Input: B1
+         *   Reply:
+         *  ![](https://i.imgur.com/q9VW3zQ.png)   ![](https://i.imgur.com/KnLPIbW.png)
+               *  Input: A3
+               *  Reply:
+               *  ![](https://i.imgur.com/R2cNI2q.png)   ![](https://i.imgur.com/8Mkfjcy.png)
+                    *  Input: C2
+                    *  Reply:
+                    *   ![](https://i.imgur.com/xtpS31q.png)   ![](https://i.imgur.com/Q6gWhqW.png)
+                    *   平手
 
 ---
 ## Finite State Machine
