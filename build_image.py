@@ -2,13 +2,8 @@ from PIL import Image
 import pyimgur
 import image_pb2
 import sys
+import os
 
-my_pb_file = "image.pb"
-
-my_all_image = image_pb2.all_image()
-
-with open(my_pb_file, "rb") as f:
-    my_all_image.ParseFromString(f.read())
 
 def rebuild_list(imagelist):
     graph = [["_","_","_"],
@@ -45,8 +40,17 @@ def rebuild_list(imagelist):
 def bind_image(imagelist, sender):
     image_name = rebuild_list(imagelist)
 
+    my_pb_file = "image.pb"
+
+    my_all_image = image_pb2.all_image()
+    my_all_image1 = image_pb2.all_image()
+
+    with open(my_pb_file, "rb") as f:
+        my_all_image.ParseFromString(f.read())
+    
     for image in my_all_image.image:
         if image.name == image_name:
+            #print("---\n\nyes\n\n---")
             return image.url
         
     
@@ -65,6 +69,7 @@ def bind_image(imagelist, sender):
     rstPic.save(img_addr)
     
     CLIENT_ID = "9150a06aa5d4a85"
+    #CLIENT_ID = os.environ['IMGUR_ID']
     PATH = img_addr
 
     im = pyimgur.Imgur(CLIENT_ID)
@@ -74,13 +79,13 @@ def bind_image(imagelist, sender):
     #print(uploaded_image.size)
     #print(uploaded_image.type)
     
-    new_image = my_all_image.image.add()
+    new_image = my_all_image1.image.add()
 
     new_image.url = uploaded_image.link
     new_image.name = image_name
 
     with open(my_pb_file, "ab") as f:
-        f.write(my_all_image.SerializeToString())
+        f.write(my_all_image1.SerializeToString())
 
     return uploaded_image.link
 

@@ -19,28 +19,28 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0bimage.proto\"\"\n\x05image\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\"\"\n\tall_image\x12\x15\n\x05image\x18\x01 \x03(\x0b\x32\x06.imageb\x06proto3')
+  serialized_pb=_b('\n\x0bimage.proto\"\"\n\x05Image\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\"\"\n\tall_image\x12\x15\n\x05image\x18\x01 \x03(\x0b\x32\x06.Imageb\x06proto3')
 )
 
 
 
 
 _IMAGE = _descriptor.Descriptor(
-  name='image',
-  full_name='image',
+  name='Image',
+  full_name='Image',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='image.name', index=0,
+      name='name', full_name='Image.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='url', full_name='image.url', index=1,
+      name='url', full_name='Image.url', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -94,16 +94,16 @@ _ALL_IMAGE = _descriptor.Descriptor(
 )
 
 _ALL_IMAGE.fields_by_name['image'].message_type = _IMAGE
-DESCRIPTOR.message_types_by_name['image'] = _IMAGE
+DESCRIPTOR.message_types_by_name['Image'] = _IMAGE
 DESCRIPTOR.message_types_by_name['all_image'] = _ALL_IMAGE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-image = _reflection.GeneratedProtocolMessageType('image', (_message.Message,), dict(
+Image = _reflection.GeneratedProtocolMessageType('Image', (_message.Message,), dict(
   DESCRIPTOR = _IMAGE,
   __module__ = 'image_pb2'
-  # @@protoc_insertion_point(class_scope:image)
+  # @@protoc_insertion_point(class_scope:Image)
   ))
-_sym_db.RegisterMessage(image)
+_sym_db.RegisterMessage(Image)
 
 all_image = _reflection.GeneratedProtocolMessageType('all_image', (_message.Message,), dict(
   DESCRIPTOR = _ALL_IMAGE,

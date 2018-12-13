@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 
-message image {
+message Image {
     string name = 1;
     string url = 2;
     /*optional string A1 = 3;
@@ -17,5 +17,5 @@ message image {
 }
 
 message all_image {
-    repeated image image = 1;
+    repeated Image image = 1;
 }
