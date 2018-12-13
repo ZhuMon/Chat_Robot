@@ -3279,27 +3279,27 @@ def webhook_handler():
             machine.go_back()
             send_image_url(event['sender']['id'], "https://i.imgur.com/5XlsDjU.png")
 
-
-        if machine.state[0:2] == "A1":
-            machine.a_one(event)
-        elif machine.state[0:2] == "A2":
-            machine.a_two(event)
-        elif machine.state[0:2] == "A3":
-            machine.a_three(event)
-        elif machine.state[0:2] == "B1":
-            machine.b_one(event)
-        elif machine.state[0:2] == "B2":
-            machine.b_two(event) 
-        elif machine.state[0:2] == "B3":
-            machine.b_three(event)
-        elif machine.state[0:2] == "C1":
-            machine.c_one(event)
-        elif machine.state[0:2] == "C2":
-            machine.c_two(event) 
-        elif machine.state[0:2] == "C3":
-            machine.c_three(event)
-        else:
-            machine.advance(event)
+        if event.get('message') and event['message'].get('text'):
+            if machine.state[0:2] == "A1":
+                machine.a_one(event)
+            elif machine.state[0:2] == "A2":
+                machine.a_two(event)
+            elif machine.state[0:2] == "A3":
+                machine.a_three(event)
+            elif machine.state[0:2] == "B1":
+                machine.b_one(event)
+            elif machine.state[0:2] == "B2":
+                machine.b_two(event) 
+            elif machine.state[0:2] == "B3":
+                machine.b_three(event)
+            elif machine.state[0:2] == "C1":
+                machine.c_one(event)
+            elif machine.state[0:2] == "C2":
+                machine.c_two(event) 
+            elif machine.state[0:2] == "C3":
+                machine.c_three(event)
+            else:
+                machine.advance(event)
         #print("Ok")
         return 'OK'
 
