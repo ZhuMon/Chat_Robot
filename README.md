@@ -2,16 +2,44 @@
 
 ## Usage
 ### Initial State : ```user```
-*   user
-    *   input: A1
-    *   reply: 
-        ![](https://i.imgur.com/vs8pO8r.png)
-        ![](https://i.imgur.com/xVUffK5.png)
-            *   input: B1
-            *   reply: 
-                ![](https://i.imgur.com/q9VW3zQ.png)
-                ![](https://i.imgur.com/KnLPIbW.png)
-                
+
+### Input a position to start the ~~game~~ bot
+ ![](https://i.imgur.com/T0Qd8Va.png)
+
+### Example : `user` -> `A1` -> `A1B1` -> `A1B1A3` -> `A1B1A3C2`
+
+### user
+
+> * Input: **A1**
+>> * go to A1
+
+### A1
+>> * Reply: 
+>>>  ![](https://i.imgur.com/vs8pO8r.png)  ![](https://i.imgur.com/xVUffK5.png)
+
+> * Input: **B1**
+>> * go to A1B1
+
+### A1B1
+>> *   Reply:
+>>>   ![](https://i.imgur.com/q9VW3zQ.png)   ![](https://i.imgur.com/KnLPIbW.png)
+
+> *  Input: **A3**
+>> * go to A1B1A3
+
+### A1B1A3
+>> *  Reply:
+>>>   ![](https://i.imgur.com/R2cNI2q.png)   ![](https://i.imgur.com/8Mkfjcy.png)
+
+> *  Input: **C2**
+>> *  go to A1B1A3C2
+
+### A1B1A3C2
+>> *  Reply:
+>>>   ![](https://i.imgur.com/xtpS31q.png)   ![](https://i.imgur.com/Q6gWhqW.png)
+>>>    平手
+
+> * go to user
 
 ---
 ## Finite State Machine
