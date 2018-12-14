@@ -1,5 +1,5 @@
 from bottle import route, run, request, abort, static_file
-
+import image_pb2
 from fsm import TocMachine
 import os
 from utils import send_image_url 
