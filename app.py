@@ -3305,11 +3305,21 @@ def webhook_handler():
 
 
 
-@route('/show-fsm', methods=['GET'])
-def show_fsm():
-    machine.get_graph().draw('fsm.png', prog='dot', format='png')
-    return static_file('fsm.png', root='./', mimetype='image/png')
+#@route('/show-fsm', methods=['GET'])
+#def show_fsm():
+#    machine.get_graph().draw('fsm.png', prog='dot', format='png')
+#    return static_file('fsm.png', root='./', mimetype='image/png')
 
+@route('/imgur-record', methods=['GET'])
+def imgur():
+    my_all_image = image_pb2.all_image()
+    with open("image.pb", rb) as f:
+        my_all_image.ParseFromString(f.read())
+    out = "   name             url"
+    for image in my_all_image.image:
+        out = out + "\n" + image.name + " " + image.url
+    
+    return out
 
 if __name__ == "__main__":
     run(host="0.0.0.0", port=PORT, debug=True, reloader=True)
