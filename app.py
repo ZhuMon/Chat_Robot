@@ -2,6 +2,7 @@ from bottle import route, run, request, abort, static_file
 import image_pb2
 from fsm import TocMachine
 import os
+import sys
 from utils import send_image_url 
 
 VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
@@ -3313,7 +3314,7 @@ def webhook_handler():
 @route('/imgur-record', methods=['GET'])
 def imgur():
     my_all_image = image_pb2.all_image()
-    with open("image.pb", rb) as f:
+    with open("image.pb", "rb") as f:
         my_all_image.ParseFromString(f.read())
     out = "   name             url"
     for image in my_all_image.image:
