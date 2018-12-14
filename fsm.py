@@ -129,7 +129,7 @@ class TocMachine(GraphMachine):
         new_image = bind_image(["A1","B2", "B1", "C1", "A3", "A2", "C2", "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
 
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
 
         self.go_back()
         
@@ -219,7 +219,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A1", "B2", "C1", "B1", "B3", "A2", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -310,7 +310,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A1", "B2", "A2", "A3", "C1", "B1", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -401,7 +401,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A1", "B2", "C2", "B1", "B3", "A3", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -492,7 +492,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A1", "B2", "A3", "A2", "C2", "B3", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -583,7 +583,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A1", "B2", "B3", "A2", "C2", "C1", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -674,7 +674,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A1", "B2", "C3", "B1", "B3", "A3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -782,7 +782,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "C1", "B2", "C3", "C2", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -873,7 +873,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "A2", "B2", "C3", "A3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -981,7 +981,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "B2", "B3", "A2", "C2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1000,7 +1000,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "B2", "B3", "A2", "C2", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1019,7 +1019,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "B2", "B3", "A2", "C2", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1074,7 +1074,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "B2", "B3", "C2", "A2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1110,7 +1110,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "B2", "B3", "A3", "C1", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1129,7 +1129,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "B2", "B3", "A3", "C1", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1148,7 +1148,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "B2", "B3", "A3", "C1", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1184,7 +1184,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "B2", "B3", "C3", "C2", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1203,7 +1203,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "B2", "B3", "C3", "C2", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1222,7 +1222,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "B2", "B3", "C3", "C2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1313,7 +1313,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "C2", "B2", "C3", "C1", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1385,7 +1385,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "A3", "B2", "C3", "B3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1404,7 +1404,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "A3", "B2", "C3", "B3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1567,7 +1567,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "C3", "B2", "C1", "C2", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1622,7 +1622,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "C3", "B2", "A2", "C1", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1677,7 +1677,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "C3", "B2", "C2", "C1", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1713,7 +1713,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "C3", "B2", "A3", "B3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1732,7 +1732,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "C3", "B2", "A3", "B3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1751,7 +1751,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B1", "A1", "C3", "B2", "A3", "B3", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1895,7 +1895,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "B1", "B3", "C1", "A3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1931,7 +1931,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "B1", "B3", "A2", "C2", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1950,7 +1950,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "B1", "B3", "A2", "C2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -1969,7 +1969,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "B1", "B3", "A2", "C2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2024,7 +2024,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "B1", "B3", "C2", "A2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2060,7 +2060,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "B1", "B3", "A3", "C1", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2079,7 +2079,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "B1", "B3", "A3", "C1", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2115,7 +2115,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "B1", "B3", "C3", "C2", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2134,7 +2134,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "B1", "B3", "C3", "C2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2206,7 +2206,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "C1", "A3", "A2", "C2", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2225,7 +2225,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "C1", "A3", "A2", "C2", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2244,7 +2244,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "C1", "A3", "A2", "C2", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2297,7 +2297,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "A2", "C2", "B1", "B3", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2316,7 +2316,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "A2", "C2", "B1", "B3", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2352,7 +2352,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "A2", "C2", "C1", "A3", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2371,7 +2371,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "A2", "C2", "C1", "A3", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2481,7 +2481,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "A2", "C2", "B3", "B1", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2517,7 +2517,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "A2", "C2", "C3", "B3", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2536,7 +2536,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "A2", "C2", "C3", "B3", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2627,7 +2627,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "C2", "A2", "A3", "C1", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2699,7 +2699,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "A3", "C1", "B1", "B3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2718,7 +2718,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "A3", "C1", "B1", "B3", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2809,7 +2809,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "B3", "B1", "C1", "A3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2861,7 +2861,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "C3", "C1", "B1", "B3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -2880,7 +2880,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B2", "A1", "C3", "C1", "B1", "B3", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3005,7 +3005,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C1", "B2", "C2", "C3", "A1", "B1", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3096,7 +3096,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C1", "B2", "C3", "C2", "A2", "B1", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3187,7 +3187,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C1", "B2", "B1", "A1", "C3", "C2", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3278,7 +3278,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C1", "B2", "B3", "C2", "A2", "A1", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3369,7 +3369,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C1", "B2", "A1", "B1", "B3", "A2", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3460,7 +3460,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C1", "B2", "A2", "B1", "B3", "C3", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3551,7 +3551,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C1", "B2", "A3", "C2", "A2", "A1", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3659,7 +3659,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "C3", "B2", "A3", "B3", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3750,7 +3750,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B1", "B2", "A3", "A1", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3858,7 +3858,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B2", "A2", "B1", "B3", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3877,7 +3877,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B2", "A2", "B1", "B3", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3896,7 +3896,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B2", "A2", "B1", "B3", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3951,7 +3951,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B2", "A2", "B3", "B1", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -3987,7 +3987,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B2", "A2", "A1", "C3", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4006,7 +4006,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B2", "A2", "A1", "C3", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4025,7 +4025,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B2", "A2", "A1", "C3", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4061,7 +4061,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B2", "A2", "A3", "B3", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4080,7 +4080,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B2", "A2", "A3", "B3", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4099,7 +4099,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B2", "A2", "A3", "B3", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4190,7 +4190,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "B3", "B2", "A3", "C3", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4262,7 +4262,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "A1", "B2", "A3", "A2", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4281,7 +4281,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "A1", "B2", "A3", "A2", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4444,7 +4444,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "A3", "B2", "C3", "B3", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4499,7 +4499,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "A3", "B2", "B1", "C3", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4554,7 +4554,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "A3", "B2", "B3", "C3", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4590,7 +4590,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "A3", "B2", "A1", "A2", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4609,7 +4609,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "A3", "B2", "A1", "A2", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4628,7 +4628,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C2", "C1", "A3", "B2", "A1", "A2", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4791,7 +4791,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C3", "B2", "B3", "A3", "C1", "C2", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4882,7 +4882,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C3", "B2", "A3", "B3", "B1", "C2", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -4973,7 +4973,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C3", "B2", "C2", "C1", "A3", "B3", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5064,7 +5064,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C3", "B2", "A2", "B3", "B1", "C1", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5155,7 +5155,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C3", "B2", "C1", "C2", "A2", "B1", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5246,7 +5246,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C3", "B2", "B1", "C2", "A2", "A3", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5337,7 +5337,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["C3", "B2", "A1", "B3", "B1", "C1", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5445,7 +5445,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "A3", "B2", "A1", "A2", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5536,7 +5536,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "C2", "B2", "A1", "C1", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5644,7 +5644,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "B2", "B1", "C2", "A2", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5663,7 +5663,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "B2", "B1", "C2", "A2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5682,7 +5682,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "B2", "B1", "C2", "A2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5737,7 +5737,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "B2", "B1", "A2", "C2", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5773,7 +5773,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "B2", "B1", "C1", "A3", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5792,7 +5792,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "B2", "B1", "C1", "A3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5811,7 +5811,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "B2", "B1", "C1", "A3", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5847,7 +5847,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "B2", "B1", "A1", "A2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5866,7 +5866,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "B2", "B1", "A1", "A2", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5885,7 +5885,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "B2", "B1", "A1", "A2", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -5976,7 +5976,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "A2", "B2", "A1", "A3", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6048,7 +6048,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "C1", "B2", "A1", "B1", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6067,7 +6067,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "C1", "B2", "A1", "B1", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6230,7 +6230,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "A1", "B2", "A3", "A2", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6285,7 +6285,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "A1", "B2", "C2", "A3", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6340,7 +6340,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "A1", "B2", "A2", "A3", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6376,7 +6376,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "A1", "B2", "C1", "B1", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6395,7 +6395,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "A1", "B2", "C1", "B1", new, "A2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6414,7 +6414,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["B3", "C3", "A1", "B2", "C1", "B1", new, "A3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6577,7 +6577,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A3", "B2", "A2", "A1", "C3", "B3", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6668,7 +6668,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A3", "B2", "A1", "A2", "C2", "B3", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6759,7 +6759,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A3", "B2", "B3", "C3", "A1", "A2", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6850,7 +6850,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A3", "B2", "B1", "A2", "C2", "C3", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -6941,7 +6941,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A3", "B2", "C3", "B3", "B1", "C2", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7032,7 +7032,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A3", "B2", "C2", "B3", "B1", "A1", new, "C1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7123,7 +7123,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A3", "B2", "C1", "A2", "C2", "C3", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7231,7 +7231,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "A1", "B2", "C1", "B1", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7322,7 +7322,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B3", "B2", "C1", "C3", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7430,7 +7430,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B2", "C2", "B3", "B1", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7449,7 +7449,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B2", "C2", "B3", "B1", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7468,7 +7468,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B2", "C2", "B3", "B1", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7523,7 +7523,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B2", "C2", "B1", "B3", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7559,7 +7559,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B2", "C2", "C3", "A1", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7578,7 +7578,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B2", "C2", "C3", "A1", new, "B3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7597,7 +7597,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B2", "C2", "C3", "A1", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7633,7 +7633,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B2", "C2", "C1", "B1", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7652,7 +7652,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B2", "C2", "C1", "B1", new, "C3"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7671,7 +7671,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B2", "C2", "C1", "B1", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7762,7 +7762,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "B1", "B2", "C1", "A1", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7834,7 +7834,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "C3", "B2", "C1", "C2", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -7853,7 +7853,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "C3", "B2", "C1", "C2", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -8016,7 +8016,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "C1", "B2", "A1", "B1", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -8071,7 +8071,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "C1", "B2", "B3", "A1", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -8126,7 +8126,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "C1", "B2", "B1", "A1", new, "C2"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -8162,7 +8162,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "C1", "B2", "C3", "C2", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -8181,7 +8181,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "C1", "B2", "C3", "C2", new, "B1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
@@ -8200,7 +8200,7 @@ class TocMachine(GraphMachine):
         responce = send_image_url(sender_id, new_image)
         new_image = bind_image(["A2", "A3", "C1", "B2", "C3", "C2", new, "A1"], sender_id)
         responce = send_image_url(sender_id, new_image)
-        responese = send_text_message(sender_id, "平手")
+        responese = send_text_message(sender_id, "End in a tie")
         self.go_back()
 
 
