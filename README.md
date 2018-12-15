@@ -3,6 +3,8 @@
 ## Usage
 ### Initial State : ```user```
 
+### You can type `init` at any time to go back to ```user``` state
+
 ### Input a position to start the ~~game~~ bot
  ![](https://i.imgur.com/T0Qd8Va.png)
 
@@ -37,13 +39,14 @@
 ### A1B1A3C2
 >> *  Reply:
 >>>   ![](https://i.imgur.com/xtpS31q.png)   ![](https://i.imgur.com/Q6gWhqW.png)
->>>    平手
+>>>    End in a tie
 
 > * go to user
 
 ---
 ## Finite State Machine
-### Remove back flow
+> Removed the back flow
+>> The fsm which has back flow(to user) will seem so mussy
    * A1
     ![A1](./fsm/A1_NoBack.png)
    * B1
