@@ -35,3 +35,15 @@
 	____o____https://i.imgur.com/bfx2R7j.png
 ,
 	x___o____https://i.imgur.com/uj1ulTV.png
+,
+	o__ox____https://i.imgur.com/MQm7WCZ.png
+,
+	o__ox_x__https://i.imgur.com/g3gipUj.png
+,
+	o_oox_x__https://i.imgur.com/JFerXGq.png
+,
+	oxoox_x__https://i.imgur.com/fQnIfbX.png
+,
+	oxoox_xo_https://i.imgur.com/r6JReZA.png
+,
+	oxooxxxo_https://i.imgur.com/uky10p9.png
