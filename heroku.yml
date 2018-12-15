@@ -1,12 +1,5 @@
-setup:
-  config:
-    ACCESS_TOKEN: EAAMZAvhWOZAnUBAHyYdQxLvil3ZBuwxp2xMev2YhZAn4pOWR4MsMolr9XOYLAs5mPFEeZALpDZAYQUPk66QZCqonXuwEzCTxFGqvtZBGGMgOLQVk3P9B2aVK0C8VdimZChPfBahmQp8AvN1ccwUGylfkTm5Ol2i6UNToTmSC31lMDZBZBgXaplGlHmS
-    PORT: 5000
-    VERIFY_TOKEN: richard
 build:
   docker:
     web: Dockerfile
-    worker: ./Dockerfile
 run:
   web: python app.py
-  worker: python3 app.py
