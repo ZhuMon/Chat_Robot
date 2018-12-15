@@ -65,7 +65,6 @@ def bind_image(imagelist, sender):
         rstPic.paste(imageA, (0,0), imageA)
 
     img_addr = "binded_image/"+sender+".png"
-    #儲存新的照片
     rstPic.save(img_addr)
     
     CLIENT_ID = "9150a06aa5d4a85"

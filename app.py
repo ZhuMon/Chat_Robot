@@ -3278,7 +3278,8 @@ def webhook_handler():
         event = body['entry'][0]['messaging'][0]
         if event.get('message') and event['message'].get('text') and event['message']['text'] == "init":
             machine.go_back()
-            send_image_url(event['sender']['id'], "https://i.imgur.com/5XlsDjU.png")
+            send_image_url(event['sender']['id'], "https://i.imgur.com/T0Qd8Va.png")
+                   # https://i.imgur.com/5XlsDjU.png")
 
         if event.get('message') and event['message'].get('text'):
             if machine.state[0:2] == "A1":
