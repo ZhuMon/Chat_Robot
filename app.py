@@ -3328,10 +3328,11 @@ def imgur():
     my_all_image = image_pb2.all_image()
     with open("image.pb", "rb") as f:
         my_all_image.ParseFromString(f.read())
-    out = "   name             url"
+    out = "<pre>" + "   name             url"
     for image in my_all_image.image:
         out = out + "\n" + image.name + " " + image.url
-    
+    out = out + "</pre>"
+
     return out
 
 if __name__ == "__main__":
