@@ -3281,7 +3281,7 @@ def webhook_handler():
             machine.go_back()
             send_image_url(event['sender']['id'], "https://i.imgur.com/T0Qd8Va.png")
         elif event.get('message') and event['message'].get('text'):
-            if event['message']['text'] != "A1" or event['message']['text'] != "A2" or event['message']['text'] != "A3" or event['message']['text'] != "B1" or event['message']['text'] != "B2" or event['message']['text'] != "B3" or event['message']['text'] != "C1" or event['message']['text'] != "C2" or event['message']['text'] != "C3" or event['message']['text'] != "init":
+            if event['message']['text'] != "A1" and event['message']['text'] != "A2" and event['message']['text'] != "A3" and event['message']['text'] != "B1" and event['message']['text'] != "B2" and event['message']['text'] != "B3" and event['message']['text'] != "C1" and event['message']['text'] != "C2" and event['message']['text'] != "C3" and event['message']['text'] != "init":
                 send_text_message(event['sender']['id'], "輸入由A~C 1~3 組成的字符")
                 send_text_message(event['sender']['id'], "ex: B2")
                 send_text_message(event['sender']['id'], "或是依照以下圖片來輸入字符")
