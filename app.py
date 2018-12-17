@@ -4,6 +4,7 @@ from fsm import TocMachine
 import os
 import sys
 from utils import send_image_url 
+from utils import send_text_message
 
 VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
 PORT = os.environ['PORT']
@@ -3279,6 +3280,16 @@ def webhook_handler():
         if event.get('message') and event['message'].get('text') and event['message']['text'] == "init":
             machine.go_back()
             send_image_url(event['sender']['id'], "https://i.imgur.com/T0Qd8Va.png")
+        elif event.get('message') and event['message'].get('text'):
+            if event['message']['text'] != "A1" or event['message']['text'] != "A2" or event['message']['text'] != "A3" or event['message']['text'] != "B1" or event['message']['text'] != "B2" or event['message']['text'] != "B3" or event['message']['text'] != "C1" or event['message']['text'] != "C2" or event['message']['text'] != "C3" or event['message']['text'] != "init":
+                send_text_message(event['sender']['id'], "輸入由A~C 1~3 組成的字符")
+                send_text_message(event['sender']['id'], "ex: B2")
+                send_text_message(event['sender']['id'], "或是依照以下圖片來輸入字符")
+                send_image_url(event['sender']['id'], "https://i.imgur.com/T0Qd8Va.png")
+
+
+
+
                    # https://i.imgur.com/5XlsDjU.png")
 
         if event.get('message') and event['message'].get('text'):
