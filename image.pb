@@ -47,3 +47,27 @@
 	oxoox_xo_https://i.imgur.com/r6JReZA.png
 ,
 	oxooxxxo_https://i.imgur.com/uky10p9.png
+,
+	_o_______https://i.imgur.com/2gzGBRu.png
+,
+	xo_______https://i.imgur.com/SmsYvKL.png
+,
+	xo__o____https://i.imgur.com/D0yFJjY.png
+,
+	xo__o__x_https://i.imgur.com/qDo28zf.png
+,
+	xo__oo_x_https://i.imgur.com/TkYqgLp.png
+,
+	xo_xoo_x_https://i.imgur.com/GVt3Kzi.png
+,
+	xo_xooox_https://i.imgur.com/mQwsuE1.png
+,
+	xoxxooox_https://i.imgur.com/lWav432.png
+,
+	o___x___ohttps://i.imgur.com/Kz6Q9lo.png
+,
+	ox__x___ohttps://i.imgur.com/P3GowBa.png
+,
+	ox__xo__ohttps://i.imgur.com/QfdamxJ.png
+,
+	ox__xo_xohttps://i.imgur.com/SFAwJT6.png
