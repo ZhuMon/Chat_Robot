@@ -1,10 +1,14 @@
 from bottle import route, run, request, abort, static_file
-import image_pb2
 from fsm import TocMachine
 import os
 import sys
 from utils import send_image_url 
 from utils import send_text_message
+
+import image_pb2
+import state_pb2
+import check_state
+
 
 VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
 PORT = os.environ['PORT']
@@ -3271,14 +3275,16 @@ def setup_webhook():
 @route("/webhook", method="POST")
 def webhook_handler():
     body = request.json
-    print('\nFSM STATE: ' + machine.state)
+    #print('\nFSM STATE: ' + machine.state)
     print('REQUEST BODY: ')
     print(body)
 
     if body['object'] == "page":
         event = body['entry'][0]['messaging'][0]
         if event.get('message') and event['message'].get('text') and event['message']['text'] == "init":
+            machine.state = check_state.get_state(event['sender']['id'])
             machine.go_back()
+            check_state.clean_state(event['sender']['id'])
             send_image_url(event['sender']['id'], "https://i.imgur.com/T0Qd8Va.png")
         elif event.get('message') and event['message'].get('text'):
             if event['message']['text'] != "A1" and event['message']['text'] != "A2" and event['message']['text'] != "A3" and event['message']['text'] != "B1" and event['message']['text'] != "B2" and event['message']['text'] != "B3" and event['message']['text'] != "C1" and event['message']['text'] != "C2" and event['message']['text'] != "C3" and event['message']['text'] != "init":
@@ -3288,9 +3294,9 @@ def webhook_handler():
                 send_image_url(event['sender']['id'], "https://i.imgur.com/T0Qd8Va.png")
 
 
-
-
                    # https://i.imgur.com/5XlsDjU.png")
+
+        machine.state = check_state.get_state(event['sender']['id'])
 
         if event.get('message') and event['message'].get('text'):
             if machine.state[0:2] == "A1":
@@ -3314,6 +3320,8 @@ def webhook_handler():
             else:
                 machine.advance(event)
         #print("Ok")
+
+        check_state.store_state(event['sender']['id'], machine.state)
         return 'OK'
 
 
@@ -3332,6 +3340,18 @@ def imgur():
     for image in my_all_image.image:
         out = out + "\n" + image.name + " " + image.url
     out = out + "</pre>"
+
+    return out
+
+@route('/state-record', methods=['GET'])
+def state_record():
+    my_all_state = state_pb2.all_sender()
+    with open("state.pb", "rb") as f:
+        my_all_state.ParseFromString(f.read())
+    out = "<pre>\n" + "      ID         state"
+    for state in my_all_state.state:
+        out = out + "\n" + state.id   + " " + state.state
+    out = out + "\n</pre>"
 
     return out
 

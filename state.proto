@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+
+message Info {
+    string id = 1;
+    string state = 2;
+}
+
+message all_sender {
+    repeated Info sender = 1;
+}
