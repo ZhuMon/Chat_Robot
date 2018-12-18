@@ -71,3 +71,29 @@
 	ox__xo__ohttps://i.imgur.com/QfdamxJ.png
 ,
 	ox__xo_xohttps://i.imgur.com/SFAwJT6.png
+,
+	x___o_o__https://i.imgur.com/eq6frMd.png
+,
+	x_x_o_o__https://i.imgur.com/Co0e0ts.png
+,
+	x_xoo_o__https://i.imgur.com/RYGpLie.png
+,
+	xxxoo_o__https://i.imgur.com/EDPe7Jn.png
+,
+	ox__x__oohttps://i.imgur.com/OJadUJ3.png
+,
+	ox__x_xoohttps://i.imgur.com/foj45C9.png
+,
+	oxo_x_xoohttps://i.imgur.com/ZN82ADS.png
+,
+	oxo_xxxoohttps://i.imgur.com/bSk6Wus.png
+,
+	xx__o__o_https://i.imgur.com/ICXWfCZ.png
+,
+	xxo_o__o_https://i.imgur.com/1AMZVlR.png
+,
+	xxo_o_xo_https://i.imgur.com/MLGE9af.png
+,
+	xxooo_xo_https://i.imgur.com/c7LdMet.png
+,
+	xxoooxxo_https://i.imgur.com/r3WvKAH.png
