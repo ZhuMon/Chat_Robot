@@ -3349,7 +3349,7 @@ def state_record():
     with open("state.pb", "rb") as f:
         my_all_state.ParseFromString(f.read())
     out = "<pre>\n" + "      ID         state"
-    for state in my_all_state.state:
+    for state in my_all_state.sender:
         out = out + "\n" + state.id   + " " + state.state
     out = out + "\n</pre>"
 
