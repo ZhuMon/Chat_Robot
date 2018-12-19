@@ -23,7 +23,9 @@
   * to record url in imgur.com to avoid upload too many times
 * pygraphviz
   * to draw FSM
-
+* processing
+  * only for draw base image
+  
 ## Deploy
 * heroku
 * docker
