@@ -1,4 +1,37 @@
 # Chat_Robot
+* A chat bot on FB messenger.
+* It's a Tic-tac-toe game. 
+* You are "o", the bot is "x".
+* After send a text, it will return two image.
+  > text: `A1`, `A2`, `A3`, `B1`, `B2`, `B3`, `C1`, `C2`, `C3`
+* One is your choice, the other is the bot's choice.
+* You can send `init` to clear at any time.
+* Or send anything to see tutorial.
+
+## Dependencies
+* transitions
+  * to implement FSM
+* pillow
+  * to make image
+* pyimgur
+  * to upload image to imgur.com
+* protobuf
+  * record states of users
+  * to handle multiple users
+* psycopg2
+  * postgreSQL for python
+  * to record url in imgur.com to avoid upload too many times
+* pygraphviz
+  * to draw FSM
+
+## Deploy
+* heroku
+* docker
+
+## FB Fan Page
+* [圈圈叉叉](https://www.facebook.com/%E5%9C%88%E5%9C%88%E5%8F%89%E5%8F%89-276838406357095/?modal=admin_todo_tour)
+* It's public.
+
 
 ## Usage
 ### Initial State : ```user```
@@ -45,8 +78,13 @@
 
 ---
 ## Finite State Machine
-> Removed the back flow
->> The fsm which has back flow(to user) will seem so mussy
+ > NOT complete FSM
+ >> The complete image is too big to push to github( 126 MB )
+ 
+ > So split to 9 images
+ 
+ > Removed the back flow
+ >> The fsm which has back flow(to user) will seem so mussy
    * A1
     ![A1](./fsm/A1_NoBack.png)
    * B1
