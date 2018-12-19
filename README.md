@@ -79,7 +79,7 @@
 ---
 ## Finite State Machine
  > NOT complete FSM
- >> The complete image is too big to push to github( 126 MB )
+ >> The complete image is too big to push to github( 176 MB )
  
  > So split to 9 images
  
