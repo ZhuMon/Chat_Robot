@@ -8,10 +8,12 @@ from utils import send_text_message
 import image_pb2
 import state_pb2
 import check_state
-
+import psycopg2
 
 VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
 PORT = os.environ['PORT']
+DATABASE_URL = os.environ['DATABASE_URL']
+
 machine = TocMachine(
     states=[
         'user',
@@ -3333,12 +3335,24 @@ def webhook_handler():
 
 @route('/imgur-record', methods=['GET'])
 def imgur():
-    my_all_image = image_pb2.all_image()
-    with open("image.pb", "rb") as f:
-        my_all_image.ParseFromString(f.read())
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
+    cur = conn.cursor()
+    
+    cur.execute("SELECT * from IMGUR")
+    rows = cur.fetchall()
+
     out = "<pre>" + "   name             url"
-    for image in my_all_image.image:
-        out = out + "\n" + image.name + " " + image.url
+    for row in rows:
+        out = out + "\n" + row[0] + " " + row[1]
+
+    
+    #my_all_image = image_pb2.all_image()
+    #with open("image.pb", "rb") as f:
+    #    my_all_image.ParseFromString(f.read())
+    #out = "<pre>" + "   name             url"
+    #for image in my_all_image.image:
+    #    out = out + "\n" + image.name + " " + image.url
     out = out + "</pre>"
 
     return out

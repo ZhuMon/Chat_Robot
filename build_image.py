@@ -3,6 +3,11 @@ import pyimgur
 import image_pb2
 import sys
 import os
+import psycopg2
+
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 
 def rebuild_list(imagelist):
@@ -39,19 +44,26 @@ def rebuild_list(imagelist):
 
 def bind_image(imagelist, sender):
     image_name = rebuild_list(imagelist)
+    cur = conn.cursor()
 
-    my_pb_file = "image.pb"
-
-    my_all_image = image_pb2.all_image()
-    my_all_image1 = image_pb2.all_image()
-
-    with open(my_pb_file, "rb") as f:
-        my_all_image.ParseFromString(f.read())
+    cur.execute("SELECT * from IMGUR")
+    rows = cur.fetchall()
     
-    for image in my_all_image.image:
-        if image.name == image_name:
-            #print("---\n\nyes\n\n---")
-            return image.url
+    for row in rows:
+        if row[0] == image_name:
+            return row[1]
+    #my_pb_file = "image.pb"
+
+    #my_all_image = image_pb2.all_image()
+    #my_all_image1 = image_pb2.all_image()
+
+    #with open(my_pb_file, "rb") as f:
+    #    my_all_image.ParseFromString(f.read())
+    
+    #for image in my_all_image.image:
+    #    if image.name == image_name:
+    #        #print("---\n\nyes\n\n---")
+    #        return image.url
         
     
     rstPic = Image.new('RGBA', (180,180), (0,0,0,0))
@@ -78,13 +90,16 @@ def bind_image(imagelist, sender):
     #print(uploaded_image.size)
     #print(uploaded_image.type)
     
-    new_image = my_all_image1.image.add()
+    #new_image = my_all_image1.image.add()
 
-    new_image.url = uploaded_image.link
-    new_image.name = image_name
+    #new_image.url = uploaded_image.link
+    #new_image.name = image_name
 
-    with open(my_pb_file, "ab") as f:
-        f.write(my_all_image1.SerializeToString())
+    #with open(my_pb_file, "ab") as f:
+    #    f.write(my_all_image1.SerializeToString())
+
+    cur.execute("INSERT INTO IMGUR VALUES('" + image_name+"', '"+uploaded_image.link+"');")
+    conn.commit()
 
     return uploaded_image.link
 
