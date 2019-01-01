@@ -1,4 +1,7 @@
 # Chat_Robot
+
+https://hackmd.io/p/S1GCfktbE#/
+
 * A chat bot on FB messenger.
 * It's a Tic-tac-toe game. 
 * You are "o", the bot is "x".
