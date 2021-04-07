@@ -1,4 +1,4 @@
-bottle==0.12.13
+bottle==0.12.19
 cGraph==0.1
 pygraphviz==1.5
 setuptools==39.0.1
