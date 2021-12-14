@@ -8,7 +8,7 @@ https://hackmd.io/p/S1GCfktbE#/
 * After send a text, it will return two image.
   > text: `A1`, `A2`, `A3`, `B1`, `B2`, `B3`, `C1`, `C2`, `C3`
 * One is your choice, the other is the bot's choice.
-* You can send `init` to clear at any time.
+* You can send `init` to restart at any time.
 * Or send anything to see tutorial.
 
 ## Dependencies
