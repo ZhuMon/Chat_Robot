@@ -1,7 +1,7 @@
 bottle==0.12.19
 cGraph==0.1
 pygraphviz==1.5
-setuptools==39.0.1
+setuptools==65.5.1
 requests==2.20.1
 transitions==0.6.9
 pillow>=6.2.2
